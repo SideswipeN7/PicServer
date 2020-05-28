@@ -1,4 +1,19 @@
-﻿html {
+﻿body {
+    margin: 0;
+    display: grid;
+}
+
+app {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.content {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+/*html {
     font-family: Roboto, 'Comic Sans MS';
     font-size: 12px;
     font-style: normal;
@@ -179,6 +194,6 @@ app {
 
     .sidebar .collapse {
         /* Never collapse the sidebar for wide screens */
-        display: block;
+/*   display: block;
     }
-}
+}*/

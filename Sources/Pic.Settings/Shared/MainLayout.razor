@@ -1,13 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="sidebar">
-    <NavMenu />
+    <NavMenu @ref="NavMenu" />
 </div>
 
 <div class="main">
-    <div class="top-row px-4 auth">
-        <LoginDisplay />
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    <div class="top-navbar">
+       <Icon Name="IconName.Dashboard" Margin="Margin.Is3.FromRight" @onclick="() => NavMenu.ToggleSidebar()" />
     </div>
 
     <div class="content px-4">

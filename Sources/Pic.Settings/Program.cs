@@ -8,6 +8,9 @@ using Blazorise;
 using Blazorise.Material;
 using Blazorise.Icons.Material;
 using Blazorise.Icons.FontAwesome;
+using Pic.Settings.Interfaces;
+using Pic.Settings.Mock;
+using Pic.Settings.Providers;
 
 namespace Pic.Settings
 {
@@ -26,6 +29,9 @@ namespace Pic.Settings
             .AddMaterialIcons()
             .AddFontAwesomeIcons();
 
+            //DI
+            builder.Services.AddSingleton<IApiClient, ApiClientMock>();//MOCK
+            //builder.Services.AddTransient<IApiClient, ApiClient>();
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddOidcAuthentication(options =>
@@ -39,8 +45,6 @@ namespace Pic.Settings
             {
                 BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
             });
-
-            builder.RootComponents.Add<App>("app");
 
             var host = builder.Build();
 
