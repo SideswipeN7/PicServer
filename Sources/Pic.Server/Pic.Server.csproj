@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pic.Encrypter\Pic.Encrypter.csproj" />
-    <ProjectReference Include="..\Pic.Repository\Pic.Repository.csproj" />
+    <ProjectReference Include="..\Pic.Repository\Pic.Repo.csproj" />
     <ProjectReference Include="..\Pic.Shared\Pic.Shared.csproj" />
   </ItemGroup>
 

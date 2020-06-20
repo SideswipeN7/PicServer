@@ -1,0 +1,10 @@
+﻿@page "/Users/Edit/{UserName}"
+
+<EditUserComponent @ref="EditUserComponent"
+                   SaveModalLocale="saveModalLocale"
+                   CancelModalLocale="cancelModalLocale"
+                   SaveBtnText="Update"
+                   ShouldEditUserName="true"
+                   OnCancelModalOk="NavigateBack"
+                   OnSaveModalOk="Update"
+                   Groups="GroupsService.Groups" />

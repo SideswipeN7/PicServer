@@ -1,3 +1,15 @@
 ﻿@page "/Groups"
 
-<h3>Group list Component</h3>
+    <MatTable Items="@groups" Class="mat-elevation_z5" ShowPaging="false">
+        <MatTableHeader>
+            <th>Group</th>
+            <th>Action</th>
+        </MatTableHeader>
+        <MatTableRow>
+            <td>@context.Name</td>
+            <td>
+                <MatButton OnClick="@((e)=>EditGroup(context))">Edit</MatButton>
+                <MatButton OnClick="@((e)=>DeleteGroup(context))">Delete</MatButton>
+            </td>
+        </MatTableRow>
+    </MatTable>

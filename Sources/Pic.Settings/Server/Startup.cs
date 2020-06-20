@@ -1,20 +1,16 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Linq;
+using Pic.Settings.Server.Configuration;
+using Pic.Settings.Server.Services;
 
 namespace Pic.Settings.Server
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public IConfiguration Configuration { get; }
 
@@ -25,6 +21,8 @@ namespace Pic.Settings.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddSingleton(Configuration.GetSection(nameof(ServiceConfiguration)).Get<ServiceConfiguration>());
+            services.AddScoped<AuthorizationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

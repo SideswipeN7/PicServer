@@ -1,24 +1,24 @@
-﻿using Pic.Settings.Shared.Models;
+﻿using Pic.Settings.Shared.Dto;
 using System.Collections.Generic;
 
 namespace Pic.Settings.Client.Interfaces
 {
     public interface IApiClient
     {
-        IEnumerable<AlbumData> GetAlbums();
-        IEnumerable<GroupData> GetGroups();
-        IEnumerable<UserData> GetUsers();
+        IEnumerable<AlbumDto> GetAlbums();
+        IEnumerable<GroupDto> GetGroups();
+        List<UserDto> GetUsers();
 
-        bool AddAlbum(AlbumData albumData);
-        bool AddGroup(GroupData groupData);
-        bool AddUser(UserData userData);
+        bool AddAlbum(AlbumDto albumData);
+        bool AddGroup(GroupDto groupData);
+        bool AddUser(UserDto userData);
 
-        bool ModifyAlbum(AlbumData albumData);
-        bool ModifyGroup(GroupData groupData);
-        bool ModifyUser(UserData userData);
+        bool ModifyAlbum(AlbumDto albumData);
+        bool ModifyGroup(GroupDto groupData);
+        bool ModifyUser(UserDto userData);
 
-        bool DeleteAlbum(AlbumData albumData);
-        bool DeleteGroup(GroupData groupData);
-        bool DeleteUser(UserData userData);
+        bool DeleteAlbum(AlbumDto albumData);
+        bool DeleteGroup(GroupDto groupData);
+        bool DeleteUser(UserDto userData);
     }
 }

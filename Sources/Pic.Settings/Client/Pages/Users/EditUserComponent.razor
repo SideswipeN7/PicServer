@@ -1,0 +1,39 @@
+﻿<EditForm Model="ViewModel" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+    <div class="mat-layout-grid">
+        <div class="mat-layout-grid-inner">
+            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4">
+                <p>
+                    <MatTextField Label="Username" @bind-Value="@ViewModel.Username" />
+                    <ValidationMessage For="@(() => ViewModel.Username)" />
+                </p>
+                <p>
+                    <MatTextField Label="Password" @bind-Value="@ViewModel.Password" Type="password" />
+                    <ValidationMessage For="@(() => ViewModel.Password)" />
+                </p>
+                <p>
+                    <MatTextField Label="Password" @bind-Value="@ViewModel.PasswordRetype" Type="password" />
+                    <ValidationMessage For="@(() => ViewModel.PasswordRetype)" />
+                </p>
+                <p>
+                    <div>Groups</div>
+                    @foreach (var group in Groups)
+                    {
+                        <div>
+                            <MatCheckbox Label="@group.Name" ValueChanged="@((e) =>ToggleGroup(group.Name, (bool)e.Value as bool))"></MatCheckbox>
+                        </div>
+                    }
+                </p>
+            </div>
+
+            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4">
+                <MatButton Type="button" Raised="true" OnClick="@(e => Cancel())">Cancel</MatButton>
+                <MatButton Type="submit" Raised="true">@SaveBtnText</MatButton>
+            </div>
+        </div>
+    </div>
+</EditForm>
+<SimpleModalComponent @ref="Modal" 
+                      ShouldCloseAfterOkAction="true"
+                      ActionOk="NavigateBack"
+                      ></SimpleModalComponent>

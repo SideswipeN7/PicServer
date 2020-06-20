@@ -1,0 +1,28 @@
+﻿@page "/Users"
+
+<MatButton OnClick="@((e) => Add())">
+    <MatIcon Icon="person_add"></MatIcon>&nbsp; Add new user
+</MatButton>
+
+<MatTable Items="@UsersService.Users" Class="mat-elevation_z11" ShowPaging="false">
+    <MatTableHeader>
+        <th>Username</th>
+        <th>Action</th>
+    </MatTableHeader>
+    <MatTableRow>
+        <td>@context.Username</td>
+        <td>
+            <MatButton OnClick="@((e)=>Edit(context))">Edit</MatButton>
+            <MatButton OnClick="@((e)=>Delete(context))">Delete</MatButton>
+        </td>
+    </MatTableRow>
+</MatTable>
+
+<SimpleModalComponent @ref="Modal" 
+                      CloseText="Close"
+                      OkText="Delete"
+                      Title="Delete user"
+                      Content="Are you sure you want delete this user? This action CANNOT be reverted"
+                      ShouldCloseAfterOkAction="true"
+                      ActionOk="DeleteUser"
+                      ></SimpleModalComponent>

@@ -1,0 +1,24 @@
+﻿@if (loginFailure)
+{
+    <div class="alert alert-danger">Wrong Credentials</div>
+}
+
+<EditForm Model="Credentials" OnValidSubmit="LogInAsync">
+    <DataAnnotationsValidator />
+    <div class="mat-layout-grid">
+        <div class="mat-layout-grid-inner">
+            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4">
+                <p>
+                    <MatTextField Label="Username" @bind-Value="@Credentials.Username" />
+                </p>
+                <p>
+                    <MatTextField Label="Password" @bind-Value="@Credentials.Password" Type="password" />
+                </p>
+            </div>
+
+            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4">
+                <MatButton Type="submit" Raised="true">Login</MatButton>
+            </div>
+        </div>
+    </div>
+</EditForm>

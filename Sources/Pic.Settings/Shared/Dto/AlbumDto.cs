@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Pic.Settings.Shared.Models
+namespace Pic.Settings.Shared.Dto
 {
-    public class AlbumData
+    public class AlbumDto
     {
         public string Title { get; set; }
         public string Summary { get; set; }

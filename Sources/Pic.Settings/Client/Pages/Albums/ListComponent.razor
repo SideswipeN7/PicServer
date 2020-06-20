@@ -1,3 +1,15 @@
 ﻿@page "/Albums"
 
-<h3>Gallery list Component</h3>
+    <MatTable Items="@albums" Class="mat-elevation_z5" ShowPaging="false">
+        <MatTableHeader>
+            <th>Album</th>
+            <th>Action</th>
+        </MatTableHeader>
+        <MatTableRow>
+            <td>@context.Title</td>
+            <td>
+                <MatButton OnClick="@((e)=>EditAlbum(context))">Edit</MatButton>
+                <MatButton OnClick="@((e)=>DeleteAlbum(context))">Delete</MatButton>
+            </td>
+        </MatTableRow>
+    </MatTable>

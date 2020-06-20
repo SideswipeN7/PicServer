@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Pic.Shared.ApiClient\Pic.Shared.ApiClient.csproj" />
     <ProjectReference Include="..\Client\Pic.Settings.Client.csproj" />
     <ProjectReference Include="..\Shared\Pic.Settings.Shared.csproj" />
   </ItemGroup>

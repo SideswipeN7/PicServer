@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Server", "Pic.Server\Pic.Server.csproj", "{4BF8A058-92C0-4E33-AD55-7A43634EB4A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Repository", "Pic.Repository\Pic.Repository.csproj", "{BE43F016-0FD6-47F0-A75E-1DDEB0340A69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Repo", "Pic.Repository\Pic.Repo.csproj", "{BE43F016-0FD6-47F0-A75E-1DDEB0340A69}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Encrypter", "Pic.Encrypter\Pic.Encrypter.csproj", "{37BB6CF0-645E-4D77-8F1C-F523F8EFB7B9}"
 EndProject
@@ -20,6 +20,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Settings.Shared", "Pic.Settings\Shared\Pic.Settings.Shared.csproj", "{CD3E0C72-CADF-4D6F-B5C5-5B766D74BE6F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Shared", "Pic.Shared\Pic.Shared.csproj", "{8269A7A0-A630-4320-BB77-54985371C353}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{42F43E81-C91D-4250-B80A-2C63C18AC83D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Shared.Authorization", "Pic.Authorization\Pic.Shared.Authorization.csproj", "{67264135-5E68-4C47-9FCA-4F0A915E1642}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Shared.Repository", "Pic.Shared.Repository\Pic.Shared.Repository.csproj", "{BCAFCC6B-1F44-46C7-9F3F-D6D406C491EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Shared.ApiClient", "Pic.Shared.ApiClient\Pic.Shared.ApiClient.csproj", "{362CFD15-7E3F-42BE-950F-02A402748228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +63,18 @@ Global
 		{8269A7A0-A630-4320-BB77-54985371C353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8269A7A0-A630-4320-BB77-54985371C353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8269A7A0-A630-4320-BB77-54985371C353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67264135-5E68-4C47-9FCA-4F0A915E1642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67264135-5E68-4C47-9FCA-4F0A915E1642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67264135-5E68-4C47-9FCA-4F0A915E1642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67264135-5E68-4C47-9FCA-4F0A915E1642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAFCC6B-1F44-46C7-9F3F-D6D406C491EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCAFCC6B-1F44-46C7-9F3F-D6D406C491EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCAFCC6B-1F44-46C7-9F3F-D6D406C491EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAFCC6B-1F44-46C7-9F3F-D6D406C491EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362CFD15-7E3F-42BE-950F-02A402748228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362CFD15-7E3F-42BE-950F-02A402748228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362CFD15-7E3F-42BE-950F-02A402748228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362CFD15-7E3F-42BE-950F-02A402748228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +87,9 @@ Global
 		{7C1FDB11-4269-4811-886E-21496AFAC27B} = {0FCFB565-1096-4F5B-9421-C4E46BE55FC2}
 		{CD3E0C72-CADF-4D6F-B5C5-5B766D74BE6F} = {0FCFB565-1096-4F5B-9421-C4E46BE55FC2}
 		{8269A7A0-A630-4320-BB77-54985371C353} = {EF5E8346-910A-4821-9E65-45B61D22F788}
+		{67264135-5E68-4C47-9FCA-4F0A915E1642} = {42F43E81-C91D-4250-B80A-2C63C18AC83D}
+		{BCAFCC6B-1F44-46C7-9F3F-D6D406C491EA} = {42F43E81-C91D-4250-B80A-2C63C18AC83D}
+		{362CFD15-7E3F-42BE-950F-02A402748228} = {42F43E81-C91D-4250-B80A-2C63C18AC83D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B04AC28-AAD0-4069-AC95-606BB6CD9A1B}

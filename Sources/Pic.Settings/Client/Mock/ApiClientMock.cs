@@ -1,5 +1,5 @@
 ﻿using Pic.Settings.Client.Interfaces;
-using Pic.Settings.Shared.Models;
+using Pic.Settings.Shared.Dto;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -8,32 +8,32 @@ namespace Pic.Settings.Client.Mock
 {
     public class ApiClientMock : IApiClient
     {
-        private List<GroupData> groups = new List<GroupData>
+        private List<GroupDto> groups = new List<GroupDto>
         {
-            new GroupData{Name="Admin", Rights=Rights.Delete },
-            new GroupData{Name="User", Rights=Rights.Read },
-            new GroupData{Name="Special", Rights=Rights.Delete},
+            new GroupDto{Name="Admin", Rights=RightsDto.Read },
+            new GroupDto{Name="User", Rights=RightsDto.Read },
+            new GroupDto{Name="Special", Rights=RightsDto.ReadWrite},
         };
-        private List<AlbumData> albums = new List<AlbumData>
+        private List<AlbumDto> albums = new List<AlbumDto>
         {
-            new AlbumData{Title="First", Path="/first_album", Summary="My first Album", RequireAuthorization= true, Groups=new List<string> { "User", "Admin" } },
-            new AlbumData{Title="Second", Path="/second_album", Summary="My second Album", RequireAuthorization= true, Groups=new List<string> { "User", "Admin" } },
+            new AlbumDto{Title="First", Path="/first_album", Summary="My first Album", RequireAuthorization= true, Groups=new List<string> { "User", "Admin" } },
+            new AlbumDto{Title="Second", Path="/second_album", Summary="My second Album", RequireAuthorization= true, Groups=new List<string> { "User", "Admin" } },
         };
-        private List<UserData> users = new List<UserData>
+        private List<UserDto> users = new List<UserDto>
         {
-            new UserData{Username = "Admin", Password= "Admin", Groups=new List<string> { "Admin" } },
-            new UserData{Username = "Student", Password= "Student", Groups=new List<string> { "User" } },
-            new UserData{Username = "Student_22", Password= "Student", Groups=new List<string> { "User" } },
+            new UserDto{Username = "Admin", Password= "Admin", Groups=new List<string> { "Admin" } },
+            new UserDto{Username = "Student", Password= "Student", Groups=new List<string> { "User" } },
+            new UserDto{Username = "Student_22", Password= "Student", Groups=new List<string> { "User" } },
         };
 
 
-        public IEnumerable<AlbumData> GetAlbums() => albums;
-        public IEnumerable<UserData> GetUsers() => users;
-        public IEnumerable<GroupData> GetGroups() => groups;
+        public IEnumerable<AlbumDto> GetAlbums() => albums;
+        public List<UserDto> GetUsers() => users;
+        public IEnumerable<GroupDto> GetGroups() => groups;
 
-        public bool AddAlbum(AlbumData albumData)
+        public bool AddAlbum(AlbumDto albumData)
         {
-            AlbumData album = FindAlbum(albumData);
+            AlbumDto album = FindAlbum(albumData);
             if (album is null)
             {
                 albums.Add(albumData);
@@ -42,9 +42,9 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool AddGroup(GroupData groupData)
+        public bool AddGroup(GroupDto groupData)
         {
-            GroupData group = FindGroup(groupData);
+            GroupDto group = FindGroup(groupData);
             if (group is null)
             {
                 groups.Add(groupData);
@@ -53,10 +53,10 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool AddUser(UserData userData)
+        public bool AddUser(UserDto userData)
         {
-            UserData user = FindUser(userData);
-            if (user != null)
+            UserDto user = FindUser(userData);
+            if (user is object)
             {
                 users.Add(userData);
             }
@@ -64,9 +64,9 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool ModifyAlbum(AlbumData albumData)
+        public bool ModifyAlbum(AlbumDto albumData)
         {
-            AlbumData album = FindAlbum(albumData);
+            AlbumDto album = FindAlbum(albumData);
             if (album is null)
             {
                 albums.Add(albumData);
@@ -80,9 +80,9 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool ModifyGroup(GroupData groupData)
+        public bool ModifyGroup(GroupDto groupData)
         {
-            GroupData group = FindGroup(groupData);
+            GroupDto group = FindGroup(groupData);
             if (group is null)
             {
                 groups.Add(groupData);
@@ -96,10 +96,10 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool ModifyUser(UserData userData)
+        public bool ModifyUser(UserDto userData)
         {
-            UserData user = FindUser(userData);
-            if (user != null)
+            UserDto user = FindUser(userData);
+            if (user is object)
             {
                 users.Add(userData);
 
@@ -112,10 +112,10 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool DeleteAlbum(AlbumData albumData)
+        public bool DeleteAlbum(AlbumDto albumData)
         {
-            AlbumData album = FindAlbum(albumData);
-            if (album != null)
+            AlbumDto album = FindAlbum(albumData);
+            if (album is object)
             {
                 albums.Remove(album);
             }
@@ -123,10 +123,10 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool DeleteGroup(GroupData groupData)
+        public bool DeleteGroup(GroupDto groupData)
         {
-            GroupData group = FindGroup(groupData);
-            if (group != null)
+            GroupDto group = FindGroup(groupData);
+            if (group is object)
             {
                 groups.Remove(group);
             }
@@ -134,10 +134,10 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        public bool DeleteUser(UserData userData)
+        public bool DeleteUser(UserDto userData)
         {
-            UserData user = FindUser(userData);
-            if (user != null)
+            UserDto user = FindUser(userData);
+            if (user is object)
             {
                 users.Remove(user);
             }
@@ -145,8 +145,8 @@ namespace Pic.Settings.Client.Mock
             return true;
         }
 
-        private UserData FindUser(UserData userData) => users.FirstOrDefault(x => x.Username == userData.Username);
-        private GroupData FindGroup(GroupData groupData) => groups.FirstOrDefault(x => x.Name == groupData.Name);
-        private AlbumData FindAlbum(AlbumData albumData) => albums.FirstOrDefault(x => x.Title == albumData.Title);
+        private UserDto FindUser(UserDto userData) => users.FirstOrDefault(x => x.Username == userData.Username);
+        private GroupDto FindGroup(GroupDto groupData) => groups.FirstOrDefault(x => x.Name == groupData.Name);
+        private AlbumDto FindAlbum(AlbumDto albumData) => albums.FirstOrDefault(x => x.Title == albumData.Title);
     }
 }

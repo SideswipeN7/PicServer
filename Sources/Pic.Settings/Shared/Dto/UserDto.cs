@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Pic.Settings.Shared.Models
+namespace Pic.Settings.Shared.Dto
 {
-    public class UserData
+    public class UserDto
     {
         public string Username { get; set; }
         public string Password { get; set; }

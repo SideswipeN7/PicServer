@@ -1,0 +1,8 @@
+﻿<MatDialog @bind-IsOpen="isOpen">
+    <MatDialogTitle>@Title</MatDialogTitle>
+    <MatDialogContent>@Content</MatDialogContent>
+    <MatDialogActions>
+        <MatButton OnClick="@(e => Close())">@CloseText</MatButton>
+        <MatButton OnClick="@(e => Ok())">@OkText</MatButton>
+    </MatDialogActions>
+</MatDialog>
