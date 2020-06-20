@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Components;
 using Pic.Settings.Client.Shared.Modal;
 using Pic.Settings.Client.ViewModels;
@@ -51,7 +52,8 @@ namespace Pic.Settings.Client.Pages.Users
 
         private void ToggleGroup(string groupName, bool shouldAdd)
         {
-            ViewModel
+            int index = ViewModel.Groups.FindIndex(x => x == groupName);
+
         }
     }
 }
