@@ -1,0 +1,12 @@
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\bin\Debug\netcoreapp3.1\Pic.Auth.Migrations.deps.json
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\bin\Debug\netcoreapp3.1\Pic.Auth.Migrations.runtimeconfig.json
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\bin\Debug\netcoreapp3.1\Pic.Auth.Migrations.runtimeconfig.dev.json
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\bin\Debug\netcoreapp3.1\Pic.Auth.Migrations.dll
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\bin\Debug\netcoreapp3.1\Pic.Auth.Migrations.pdb
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.csprojAssemblyReference.cache
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.AssemblyInfoInputs.cache
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.AssemblyInfo.cs
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.csproj.CoreCompileInputs.cache
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.dll
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.pdb
+D:\REPO\PicServer\Sources\Pic.Auth.Migrations\obj\Debug\netcoreapp3.1\Pic.Auth.Migrations.genruntimeconfig.cache

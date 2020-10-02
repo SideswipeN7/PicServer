@@ -1,0 +1,4 @@
+D:\REPO\PicServer\Sources\Pic.Shared\obj\Debug\netcoreapp3.1\Pic.Shared.csprojAssemblyReference.cache
+D:\REPO\PicServer\Sources\Pic.Shared\obj\Debug\netcoreapp3.1\Pic.Shared.AssemblyInfoInputs.cache
+D:\REPO\PicServer\Sources\Pic.Shared\obj\Debug\netcoreapp3.1\Pic.Shared.AssemblyInfo.cs
+D:\REPO\PicServer\Sources\Pic.Shared\obj\Debug\netcoreapp3.1\Pic.Shared.csproj.CoreCompileInputs.cache

@@ -1,0 +1,12 @@
+D:\REPO\PicServer\Sources\Pic.Migrations\bin\Debug\net5.0\Pic.Migrations.deps.json
+D:\REPO\PicServer\Sources\Pic.Migrations\bin\Debug\net5.0\Pic.Migrations.dll
+D:\REPO\PicServer\Sources\Pic.Migrations\bin\Debug\net5.0\ref\Pic.Migrations.dll
+D:\REPO\PicServer\Sources\Pic.Migrations\bin\Debug\net5.0\Pic.Migrations.pdb
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.csprojAssemblyReference.cache
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.GeneratedMSBuildEditorConfig.editorconfig
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.AssemblyInfoInputs.cache
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.AssemblyInfo.cs
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.csproj.CoreCompileInputs.cache
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.dll
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\ref\Pic.Migrations.dll
+D:\REPO\PicServer\Sources\Pic.Migrations\obj\Debug\net5.0\Pic.Migrations.pdb
