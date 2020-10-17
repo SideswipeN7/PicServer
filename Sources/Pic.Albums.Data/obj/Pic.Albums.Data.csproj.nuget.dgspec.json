@@ -1,20 +1,91 @@
 {
   "format": 1,
   "restore": {
-    "D:\\REPO\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj": {}
+    "C:\\repo\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj": {}
   },
   "projects": {
-    "D:\\REPO\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj": {
+    "C:\\repo\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPO\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj",
+        "projectUniqueName": "C:\\repo\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj",
         "projectName": "Pic.Albums.Data",
-        "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj",
-        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-        "outputPath": "D:\\REPO\\PicServer\\Sources\\Pic.Albums.Data\\obj\\",
+        "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Albums.Data\\Pic.Albums.Data.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PicServer\\Sources\\Pic.Albums.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
+                "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj"
+              },
+              "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
+                "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc.2.20475.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0-rc.2.20475.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
+        "projectName": "Pic.Database.Data",
+        "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,6 +99,74 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj",
+        "projectName": "Pic.Pictures.Data",
+        "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
+                "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -54,7 +193,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,15 @@
+C:\repo\PicServer\Sources\Pic.Pictures.Data\bin\Debug\net5.0\Pic.Pictures.Data.deps.json
+C:\repo\PicServer\Sources\Pic.Pictures.Data\bin\Debug\net5.0\Pic.Pictures.Data.dll
+C:\repo\PicServer\Sources\Pic.Pictures.Data\bin\Debug\net5.0\ref\Pic.Pictures.Data.dll
+C:\repo\PicServer\Sources\Pic.Pictures.Data\bin\Debug\net5.0\Pic.Pictures.Data.pdb
+C:\repo\PicServer\Sources\Pic.Pictures.Data\bin\Debug\net5.0\Pic.Database.Data.dll
+C:\repo\PicServer\Sources\Pic.Pictures.Data\bin\Debug\net5.0\Pic.Database.Data.pdb
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.csprojAssemblyReference.cache
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.AssemblyInfoInputs.cache
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.AssemblyInfo.cs
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.csproj.CoreCompileInputs.cache
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.csproj.CopyComplete
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.dll
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\ref\Pic.Pictures.Data.dll
+C:\repo\PicServer\Sources\Pic.Pictures.Data\obj\Debug\net5.0\Pic.Pictures.Data.pdb

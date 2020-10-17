@@ -1,0 +1,17 @@
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Database.Data.dll
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Pictures.Data.dll
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Database.Data.pdb
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.csprojAssemblyReference.cache
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.AssemblyInfoInputs.cache
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.AssemblyInfo.cs
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Albums.Data.deps.json
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Albums.Data.dll
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\ref\Pic.Albums.Data.dll
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Albums.Data.pdb
+C:\repo\PicServer\Sources\Pic.Albums.Data\bin\Debug\net5.0\Pic.Pictures.Data.pdb
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.csproj.CoreCompileInputs.cache
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.csproj.CopyComplete
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.dll
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\ref\Pic.Albums.Data.dll
+C:\repo\PicServer\Sources\Pic.Albums.Data\obj\Debug\net5.0\Pic.Albums.Data.pdb

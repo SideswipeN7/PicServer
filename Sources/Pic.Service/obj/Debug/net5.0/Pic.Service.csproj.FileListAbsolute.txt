@@ -1,0 +1,6 @@
+C:\repo\PicServer\Sources\Pic.Service\obj\Debug\net5.0\Pic.Service.csprojAssemblyReference.cache
+C:\repo\PicServer\Sources\Pic.Service\obj\Debug\net5.0\Pic.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\PicServer\Sources\Pic.Service\obj\Debug\net5.0\Pic.Service.AssemblyInfoInputs.cache
+C:\repo\PicServer\Sources\Pic.Service\obj\Debug\net5.0\Pic.Service.AssemblyInfo.cs
+C:\repo\PicServer\Sources\Pic.Service\obj\Debug\net5.0\Pic.Service.csproj.CoreCompileInputs.cache
+C:\repo\PicServer\Sources\Pic.Service\obj\Debug\net5.0\Pic.Service.MvcApplicationPartsAssemblyInfo.cache

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U17YfmEtDTGVIC7sYJR1wgOs5uai76c3dzoVqrPV5IyI6xQZDjrY0ciyywVrYWQqMrrv5gYosqeFCquHKOzp0A==",
+  "dgSpecHash": "aA0dGZbiW+NwJymDUQWY7MUK2xXb/kubXkCsDTkV4zhhQBm2wP9pHvoFlQz1hj0wW6ovAzVFqistKFc5ZoICXw==",
   "success": true,
-  "projectFilePath": "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj",
+  "projectFilePath": "C:\\repo\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

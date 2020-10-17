@@ -17,13 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2B15F4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pictures", "Pictures", "{D8B5F390-6747-4D35-91B9-9FE4AD716FCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pic.Pictures.Data", "Pic.Pictures.Data\Pic.Pictures.Data.csproj", "{56253223-A5C4-49D1-B0E8-98A20AFC5F26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pic.Pictures.Data", "Sources\Pic.Pictures.Data\Pic.Pictures.Data.csproj", "{56253223-A5C4-49D1-B0E8-98A20AFC5F26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Albums", "Albums", "{89F093CD-81D6-4208-844B-AB49B7FE0354}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pic.Albums.Data", "Sources\Pic.Albums.Data\Pic.Albums.Data.csproj", "{CD97195C-B494-4CD7-BF90-AC11C7556FBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pic.Albums", "Pic.Albums\Pic.Albums.csproj", "{DDC1FEE4-BB02-476F-8033-3562CE2BE068}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pic.Albums", "Sources\Pic.Albums\Pic.Albums.csproj", "{DDC1FEE4-BB02-476F-8033-3562CE2BE068}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

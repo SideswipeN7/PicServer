@@ -1,78 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\REPO\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj": {}
+    "C:\\repo\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj": {}
   },
   "projects": {
-    "D:\\REPO\\PicServer\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
+    "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPO\\PicServer\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj",
-        "projectName": "Pic.Pictures.Data",
-        "projectPath": "D:\\REPO\\PicServer\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj",
-        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-        "outputPath": "D:\\REPO\\PicServer\\Pic.Pictures.Data\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
-                "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
+        "projectUniqueName": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
         "projectName": "Pic.Database.Data",
-        "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
-        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-        "outputPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\obj\\",
+        "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -122,21 +64,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\REPO\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj": {
+    "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPO\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj",
-        "projectName": "Pic.Pictures",
-        "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj",
-        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-        "outputPath": "D:\\REPO\\PicServer\\Sources\\Pic.Pictures\\obj\\",
+        "projectUniqueName": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj",
+        "projectName": "Pic.Pictures.Data",
+        "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,8 +92,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\REPO\\PicServer\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
-                "projectPath": "D:\\REPO\\PicServer\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj"
+              "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
+                "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj"
               }
             }
           }
@@ -180,7 +122,65 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repo\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repo\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj",
+        "projectName": "Pic.Pictures",
+        "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures\\Pic.Pictures.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
+                "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
         }
       }
     }
