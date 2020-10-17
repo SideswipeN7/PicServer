@@ -1,0 +1,12 @@
+D:\REPO\PicServer\Sources\Pic.Database\bin\Debug\net5.0\Pic.Database.deps.json
+D:\REPO\PicServer\Sources\Pic.Database\bin\Debug\net5.0\Pic.Database.dll
+D:\REPO\PicServer\Sources\Pic.Database\bin\Debug\net5.0\ref\Pic.Database.dll
+D:\REPO\PicServer\Sources\Pic.Database\bin\Debug\net5.0\Pic.Database.pdb
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.csprojAssemblyReference.cache
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.GeneratedMSBuildEditorConfig.editorconfig
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.AssemblyInfoInputs.cache
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.AssemblyInfo.cs
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.csproj.CoreCompileInputs.cache
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.dll
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\ref\Pic.Database.dll
+D:\REPO\PicServer\Sources\Pic.Database\obj\Debug\net5.0\Pic.Database.pdb

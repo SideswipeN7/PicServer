@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pic.Database\Pic.Database.csproj" />
+    <ProjectReference Include="..\Pic.Migrations\Pic.Migrations.csproj" />
+  </ItemGroup>
+
 </Project>

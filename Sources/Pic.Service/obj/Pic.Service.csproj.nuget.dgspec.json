@@ -4,6 +4,188 @@
     "D:\\REPO\\PicServer\\Sources\\Pic.Service\\Pic.Service.csproj": {}
   },
   "projects": {
+    "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
+        "projectName": "Pic.Database.Data",
+        "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj",
+        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
+        "outputPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\REPO\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\REPO\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj",
+        "projectName": "Pic.Database",
+        "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj",
+        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
+        "outputPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj": {
+                "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database.Data\\Pic.Database.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj",
+        "projectName": "Pic.Migrations",
+        "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj",
+        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
+        "outputPath": "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\REPO\\PicServer\\Sources\\Pic.Service\\Pic.Service.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +209,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\REPO\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj": {
+                "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj"
+              },
+              "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj": {
+                "projectPath": "D:\\REPO\\PicServer\\Sources\\Pic.Migrations\\Pic.Migrations.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
