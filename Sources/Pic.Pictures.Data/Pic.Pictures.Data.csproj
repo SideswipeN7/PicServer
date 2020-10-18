@@ -8,4 +8,9 @@
     <ProjectReference Include="..\Pic.Database.Data\Pic.Database.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\" />
+    <Folder Include="MappingProfiles\" />
+  </ItemGroup>
+
 </Project>

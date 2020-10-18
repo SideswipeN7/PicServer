@@ -4,9 +4,9 @@ using Pic.Database.Data.Entities;
 
 namespace Pic.Albums.Data.Entities.Builders
 {
-    public class AlbumsPicturesBuilder : EntityBuilder<AlbumsPictures>
+    public class AlbumsPicturesBuilder : EntityBuilder<AlbumPicture>
     {
-        public override void Configure(EntityTypeBuilder<AlbumsPictures> builder)
+        public override void Configure(EntityTypeBuilder<AlbumPicture> builder)
         {
             base.Configure(builder);
 

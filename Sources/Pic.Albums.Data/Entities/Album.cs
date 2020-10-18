@@ -9,6 +9,8 @@ namespace Pic.Albums.Data.Entities
 
         public string Description { get; set; }
 
-        public List<AlbumsPictures> Pictures { get; set; }
+        public string Owner { get; set; }
+
+        public List<AlbumPicture> Pictures { get; set; }
     }
 }

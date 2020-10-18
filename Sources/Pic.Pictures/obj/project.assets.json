@@ -1468,6 +1468,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Pic.Database/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.9",
+          "Pic.Database.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pic.Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pic.Database.dll": {}
+        }
+      },
       "Pic.Database.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5670,6 +5684,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Pic.Database/1.0.0": {
+      "type": "project",
+      "path": "../Pic.Database/Pic.Database.csproj",
+      "msbuildProject": "../Pic.Database/Pic.Database.csproj"
+    },
     "Pic.Database.Data/1.0.0": {
       "type": "project",
       "path": "../Pic.Database.Data/Pic.Database.Data.csproj",
@@ -5683,6 +5702,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Pic.Database >= 1.0.0",
       "Pic.Pictures.Data >= 1.0.0"
     ]
   },
@@ -5713,6 +5733,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\repo\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj": {
+              "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Database\\Pic.Database.csproj"
+            },
             "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj": {
               "projectPath": "C:\\repo\\PicServer\\Sources\\Pic.Pictures.Data\\Pic.Pictures.Data.csproj"
             }

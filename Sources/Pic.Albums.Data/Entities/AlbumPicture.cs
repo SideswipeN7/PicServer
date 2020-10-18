@@ -3,7 +3,7 @@ using Pic.Pictures.Entities;
 
 namespace Pic.Albums.Data.Entities
 {
-    public class AlbumsPictures : BaseEntity
+    public class AlbumPicture : BaseEntity
     {
         public int PictureId { get; set; }
 
