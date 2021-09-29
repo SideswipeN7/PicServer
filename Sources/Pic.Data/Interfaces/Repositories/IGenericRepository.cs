@@ -8,5 +8,9 @@ public interface IGenericRepository<T> where T : class, IEntity
 
     Task UpdateAsync(T entity, CancellationToken cancellationToken = default);
 
+    Task UpdateAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default);
+
     Task<T> InsertAsync(T entity, CancellationToken cancellationToken = default);
+
+    Task SaveChangesAsync(CancellationToken cancellationToken = default);
 }

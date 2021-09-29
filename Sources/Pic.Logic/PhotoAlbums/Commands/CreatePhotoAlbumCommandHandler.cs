@@ -26,9 +26,9 @@ public class CreatePhotoAlbumCommandHandler : IRequestHandler<CreatePhotoAlbumCo
             Title = request.Title,
         };
 
-        fileService.CreateFolder(photoAlbum.FolderName);
+        await photoAlbumRepository.InsertAsync(photoAlbum, cancellationToken);
 
-        await photoAlbumRepository.InsertAsync(photoAlbum);
+        fileService.CreateFolder(photoAlbum.FolderName);
 
         return photoAlbum.Id;
     }

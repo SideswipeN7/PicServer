@@ -4,13 +4,13 @@ namespace Pic.Data.Models;
 
 public class PhotoAlbum : BaseModel, IEntity
 {
-    public string Title { get; private set; } = default!;
+    public string Title { get; set; } = default!;
 
     public string FolderName { get; init; } = default!;
 
     public byte[]? Thumbnail { get; private set; }
 
-    private List<Photo> _photos = new();
+    private readonly List<Photo> _photos = new();
 
     public IReadOnlyCollection<Photo> Photos => _photos;
 

@@ -14,9 +14,5 @@ public class Photo : BaseModel, IEntity
 
     public PhotoAlbum PhotoAlbum { get; set; } = default!;
 
-    public void ChangeTitle(string newName)
-    {
-        Name = newName;
-        UpdateModel();
-    }
+    public void ChangeTitle(string newName) => Name = newName;
 }

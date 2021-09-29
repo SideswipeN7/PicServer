@@ -1,18 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Pic.Data.Interfaces;
-using Pic.Data.Interfaces.Repositories;
+﻿using Pic.Data.Interfaces.Repositories;
 
 namespace Pic.Persistance.Repositories;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
 {
-    private DbContext DbContext { get; init; } = default!;
+    public DbContext DbContext { get; init; } = default!;
 
     protected DbSet<T> Context => DbContext.Set<T>();
 
-#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
-    public Task<T?> FindAsync(int id, CancellationToken cancellationToken = default) => Context.FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
-#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
+    public Task<T?> FindAsync(int id, CancellationToken cancellationToken = default) => Context.FirstOrNullAsync(id, cancellationToken);
 
     public async Task<T> InsertAsync(T entity, CancellationToken cancellationToken = default)
     {
@@ -29,5 +25,24 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class, IEnti
         Context.Update(entity);
 
         return DbContext.SaveChangesAsync(cancellationToken);
+    }
+
+    public Task UpdateAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
+    {
+        Context.UpdateRange(entities);
+
+        return DbContext.SaveChangesAsync(cancellationToken);
+    }
+
+    public Task SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        return DbContext.SaveChangesAsync(cancellationToken);
+    }
+
+    public Task DeleteRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
+    {
+        Context.RemoveRange(entities);
+
+        return DbContext.SaveChangesAsync();
     }
 }
