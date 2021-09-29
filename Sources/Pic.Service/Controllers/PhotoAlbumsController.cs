@@ -9,12 +9,12 @@ namespace Pic.Service.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PhotoController : ControllerBase
+    public class PhotoAlbumsController : ControllerBase
     {
         private readonly ILogger<PhotoController> logger;
         private readonly IMediator mediator;
 
-        public PhotoController(ILogger<PhotoController> logger, IMediator mediator)
+        public PhotoAlbumsController(ILogger<PhotoController> logger, IMediator mediator)
         {
             this.logger = logger;
             this.mediator = mediator;
@@ -32,10 +32,28 @@ namespace Pic.Service.Controllers
             return mediator.Send(new UpdatePhotoAlbumTitleCommand(id, addPhotoAlbum.Title));
         }
 
+        [HttpPatch("restore/{id}")]
+        public Task Restore(int id)
+        {
+            return mediator.Send(new RestorePhotoAlbumsCommand(new[] { id }));
+        }
+
+        [HttpPatch("restore")]
+        public Task Restore(IEnumerable<int> ids)
+        {
+            return mediator.Send(new RestorePhotoAlbumsCommand(ids));
+        }
+
         [HttpDelete("{id}")]
         public Task MarkAsDeleted(int id)
         {
-            return mediator.Send(new MarkPhotoAlbumAsDeletedCommand(id));
+            return mediator.Send(new MarkPhotoAlbumsAsDeletedCommand(new[] { id }));
+        }
+
+        [HttpDelete]
+        public Task MarkAsDeleted(IEnumerable<int> ids)
+        {
+            return mediator.Send(new MarkPhotoAlbumsAsDeletedCommand(ids));
         }
 
         [HttpDelete("force-delete")]

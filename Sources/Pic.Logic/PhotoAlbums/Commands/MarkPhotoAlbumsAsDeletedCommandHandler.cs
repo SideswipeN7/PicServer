@@ -13,9 +13,9 @@ public class MarkPhotoAlbumsAsDeletedCommandHandler : IRequestHandler<MarkPhotoA
     {
         var photoAlbums = photoAlbumRepository.FindAlbums(request.PhotoAlbumIds);
 
-        await photoAlbums.ForEachAsync(pa => pa.MarkAsDeleted());
+        await photoAlbums.ForEachAsync(pa => pa.MarkAsDeleted(), cancellationToken);
 
-        await photoAlbumRepository.SaveChangesAsync();
+        await photoAlbumRepository.SaveChangesAsync(cancellationToken);
 
         return Unit.Value;
     }

@@ -11,4 +11,6 @@ public abstract class BaseModel
     public bool IsDeleted { get; private set; }
 
     public void MarkAsDeleted() => IsDeleted = true;
+
+    public void Restore() => IsDeleted = false;
 }

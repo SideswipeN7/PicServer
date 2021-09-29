@@ -19,6 +19,13 @@ public class PhotoAlbumRepository : GenericRepository<PhotoAlbum>, IPhotoAlbumRe
             .AsAsyncEnumerable();
     }
 
+    public IAsyncEnumerable<PhotoAlbum> FindAlbumsMarkedAsDeleted(IEnumerable<int> photoAlbumIds)
+    {
+        return Context
+             .Where(pa => pa.IsDeleted && photoAlbumIds.Contains(pa.Id))
+             .AsAsyncEnumerable();
+    }
+
     public IAsyncEnumerable<AlbumInfo> GetPhotoAlbumsInfosAsync()
     {
         return Context
