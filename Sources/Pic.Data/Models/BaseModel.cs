@@ -10,11 +10,11 @@ public class BaseModel
 
     public bool IsDeleted { get; private set; }
 
-    public void MarkAsDeleted()
-    {
-        IsDeleted = true;
-        UpdateModelDate();
-    }
+    public void MarkAsDeleted() => IsDeleted = true;
 
-    protected void UpdateModelDate() => UpdateDate = DateTimeOffset.UtcNow;
+    //protected void UpdateModel<T>(Action<T> updateFunc) where T : BaseModel
+    //{
+    //    updateFunc((T)this);
+    //    UpdateDate = DateTimeOffset.UtcNow;
+    //}
 }

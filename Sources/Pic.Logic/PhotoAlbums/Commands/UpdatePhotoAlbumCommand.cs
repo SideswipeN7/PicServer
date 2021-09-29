@@ -1,4 +1,3 @@
-﻿namespace Pic.Logic.Photos.Commands
-{
-    public record UpdatePhotoAlbumCommand(int PhotoAlbumId, string Title) : IRequest;
-}
+﻿namespace Pic.Logic.Photos.Commands;
+
+public record UpdatePhotoAlbumCommand(int PhotoAlbumId, string Title) : IRequest;

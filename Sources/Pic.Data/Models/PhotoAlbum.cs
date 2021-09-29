@@ -10,35 +10,19 @@ public class PhotoAlbum : BaseModel, IEntity
 
     public byte[]? Thumbnail { get; private set; }
 
-    public ICollection<Photo> Photos { get; set; } = default!;
+    private List<Photo> _photos = new();
 
-    public void AddPhoto(Photo photoToAdd)
-    {
-        Photos.Add(photoToAdd);
-        UpdateModelDate();
-    }
+    public IReadOnlyCollection<Photo> Photos => _photos;
 
-    public void RemovePhoto(int photoId)
-    {
-        RemovePhotos(new[] { photoId });
-        UpdateModelDate();
-    }
+    public void AddPhotos(IEnumerable<Photo> photosToAdd) => _photos.AddRange(photosToAdd);
 
-    public void RemovePhotos(IEnumerable<int> ids)
-    {
-        Photos = Photos.Where(p => !ids.Contains(p.Id)).ToList();
-        UpdateModelDate();
-    }
+    public void AddPhoto(Photo photoToAdd) => AddPhotos(new[] { photoToAdd });
 
-    public void SetThumbnail(byte[]? newThumbnail = null)
-    {
-        Thumbnail = newThumbnail;
-        UpdateModelDate();
-    }
+    public void RemovePhoto(int photoId) => RemovePhotos(new[] { photoId });
 
-    public void ChangeTitle(string newTitle)
-    {
-        Title = newTitle;
-        UpdateModelDate();
-    }
+    public void RemovePhotos(IEnumerable<int> ids) => _photos.RemoveAll(p => ids.Contains(p.Id));
+
+    public void SetThumbnail(byte[]? newThumbnail = null) => Thumbnail = newThumbnail;
+
+    public void ChangeTitle(string newTitle) => Title = newTitle;
 }

@@ -17,6 +17,6 @@ public class Photo : BaseModel, IEntity
     public void ChangeTitle(string newName)
     {
         Name = newName;
-        UpdateModelDate();
+        UpdateModel();
     }
 }
