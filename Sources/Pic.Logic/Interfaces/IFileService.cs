@@ -2,11 +2,11 @@
 
 public interface IFileService
 {
-    void CreateFolder(string path, string name);
+    void CreateDirectory(string path, string name);
 
-    void CreateFolder(string name);
+    void CreateDirectory(string name);
 
-    bool RemoveFolder(string path, string name);
+    bool DeleteDirectory(string path, string name);
 
-    bool RemoveFolder(string folderName);
+    bool DeleteDirectory(string folderName);
 }

@@ -24,7 +24,7 @@ public class DeletePhotoAlbumsCommandHandler : IRequestHandler<DeletePhotoAlbums
 
         await foreach (var photoAlbum in photoAlbums)
         {
-            var isDeleted = fileService.RemoveFolder(photoAlbum.FolderName);
+            var isDeleted = fileService.DeleteDirectory(photoAlbum.FolderName);
 
             if (isDeleted)
             {

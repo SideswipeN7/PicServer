@@ -5,7 +5,7 @@ namespace Pic.Logic.Services;
 
 public class FileService : IFileService
 {
-    public void CreateFolder(string path, string name)
+    public void CreateDirectory(string path, string name)
     {
         var fullPath = Path.Combine(path, name);
 
@@ -15,21 +15,21 @@ public class FileService : IFileService
         }
     }
 
-    public void CreateFolder(string name)
+    public void CreateDirectory(string name)
     {
         var baseFolder = GetBaseFolderPath();
 
-        CreateFolder(baseFolder, name);
+        CreateDirectory(baseFolder, name);
     }
 
-    public bool RemoveFolder(string folderName)
+    public bool DeleteDirectory(string folderName)
     {
         var baseFolder = GetBaseFolderPath();
 
-        return RemoveFolder(baseFolder, folderName);
+        return DeleteDirectory(baseFolder, folderName);
     }
 
-    public bool RemoveFolder(string path, string name)
+    public bool DeleteDirectory(string path, string name)
     {
         var fullPath = Path.Combine(path, name);
 
@@ -47,7 +47,7 @@ public class FileService : IFileService
         {
             Directory.Delete(fullPath, true);
 
-            return false;
+            return true;
         }
         catch
         {
