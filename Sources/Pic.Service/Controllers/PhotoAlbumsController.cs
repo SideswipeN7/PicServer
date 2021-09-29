@@ -38,7 +38,7 @@ namespace Pic.Service.Controllers
             return mediator.Send(new MarkPhotoAlbumAsDeletedCommand(id));
         }
 
-        [HttpDelete("hard-delete")]
+        [HttpDelete("force-delete")]
         public Task MarkAsDeleted()
         {
             return mediator.Send(new DeletePhotoAlbumsCommand());
