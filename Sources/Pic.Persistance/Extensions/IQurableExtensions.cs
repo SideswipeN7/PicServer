@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 
 namespace Pic.Persistance.Extensions;
+
 internal static class IQurableExtensions
 {
     public static IQueryable<T> OnlyActive<T>(this IQueryable<T> query) where T : BaseModel

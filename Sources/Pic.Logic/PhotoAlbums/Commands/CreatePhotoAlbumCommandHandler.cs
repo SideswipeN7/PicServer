@@ -1,7 +1,4 @@
-﻿using Pic.Data.Interfaces.Repositories;
-using Pic.Data.Models;
-using Pic.Logic.Interfaces;
-using Pic.Logic.Photos.Commands;
+﻿using Pic.Logic.Directories.Commands;
 
 namespace Pic.Logic.PhotoAlbums.Commands;
 
@@ -9,13 +6,13 @@ public class CreatePhotoAlbumCommandHandler : IRequestHandler<CreatePhotoAlbumCo
 {
     private readonly INameGenerationService nameGenerationService;
     private readonly IPhotoAlbumRepository photoAlbumRepository;
-    private readonly IFileService fileService;
+    private readonly IMediator mediator;
 
-    public CreatePhotoAlbumCommandHandler(INameGenerationService nameGenerationService, IPhotoAlbumRepository photoAlbumRepository, IFileService fileService)
+    public CreatePhotoAlbumCommandHandler(INameGenerationService nameGenerationService, IPhotoAlbumRepository photoAlbumRepository, IMediator mediator)
     {
         this.nameGenerationService = nameGenerationService;
         this.photoAlbumRepository = photoAlbumRepository;
-        this.fileService = fileService;
+        this.mediator = mediator;
     }
 
     public async Task<int> Handle(CreatePhotoAlbumCommand request, CancellationToken cancellationToken)
@@ -28,7 +25,15 @@ public class CreatePhotoAlbumCommandHandler : IRequestHandler<CreatePhotoAlbumCo
 
         await photoAlbumRepository.InsertAsync(photoAlbum, cancellationToken);
 
-        fileService.CreateDirectory(photoAlbum.FolderName);
+        var isCreated = await mediator.Send(new CreateDirectoryCommand(photoAlbum.FolderName));
+
+        if (!isCreated)
+        {
+            await photoAlbumRepository.DeleteRangeAsync(new[] { photoAlbum }, cancellationToken);
+
+            // TODO: Throw correct exception
+            throw new Exception();
+        }
 
         return photoAlbum.Id;
     }

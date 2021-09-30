@@ -85,7 +85,6 @@ static void RunMigration(IServiceProvider services)
 
     var context = provider.GetRequiredService<PicDbContext>();
 
-    //context.Database.EnsureCreated();
     context.Database.Migrate();
 }
 

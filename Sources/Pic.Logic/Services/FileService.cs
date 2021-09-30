@@ -1,64 +1,33 @@
-﻿using System.Reflection;
-using Pic.Logic.Interfaces;
-
-namespace Pic.Logic.Services;
+﻿namespace Pic.Logic.Services;
 
 public class FileService : IFileService
 {
-    public void CreateDirectory(string path, string name)
+    public bool CreateDirectory(string path)
     {
-        var fullPath = Path.Combine(path, name);
-
-        if (!Directory.Exists(fullPath))
+        if (!Directory.Exists(path))
         {
-            Directory.CreateDirectory(fullPath);
-        }
-    }
-
-    public void CreateDirectory(string name)
-    {
-        var baseFolder = GetBaseFolderPath();
-
-        CreateDirectory(baseFolder, name);
-    }
-
-    public bool DeleteDirectory(string folderName)
-    {
-        var baseFolder = GetBaseFolderPath();
-
-        return DeleteDirectory(baseFolder, folderName);
-    }
-
-    public bool DeleteDirectory(string path, string name)
-    {
-        var fullPath = Path.Combine(path, name);
-
-        if (!Directory.Exists(fullPath))
-        {
-            return true;
+            return Directory.CreateDirectory(path).Exists;
         }
 
-        return SecureDeleteDirectory(fullPath);
+        return true;
     }
 
-    private static bool SecureDeleteDirectory(string fullPath)
+    public bool DeleteDirectory(string path, bool isRecursive = true)
+    {
+        Directory.Delete(path, isRecursive);
+
+        return true;
+    }
+
+    public bool SecureDeleteDirectory(string path, bool isRecursive = true)
     {
         try
         {
-            Directory.Delete(fullPath, true);
-
-            return true;
+            return DeleteDirectory(path, isRecursive);
         }
         catch
         {
             return false;
         }
-    }
-
-    private static string GetBaseFolderPath()
-    {
-        var executionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
-
-        return Path.Combine(executionFolder, "..", "..", "..", "..", "Data");
     }
 }

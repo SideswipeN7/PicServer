@@ -1,7 +1,4 @@
-﻿using Pic.Data.Interfaces.Repositories;
-using Pic.Data.Models;
-
-namespace Pic.Logic.PhotoAlbums.Queries;
+﻿namespace Pic.Logic.PhotoAlbums.Queries;
 
 internal class GetPhotoAlbumsInfoQueryHandler : IRequestHandler<GetPhotoAlbumsInfoQuery, IEnumerable<AlbumInfo>>
 {
@@ -14,8 +11,6 @@ internal class GetPhotoAlbumsInfoQueryHandler : IRequestHandler<GetPhotoAlbumsIn
 
     public async Task<IEnumerable<AlbumInfo>> Handle(GetPhotoAlbumsInfoQuery request, CancellationToken cancellationToken)
     {
-        var results = await photoAlbumRepository.GetPhotoAlbumsInfosAsync().ToListAsync(cancellationToken);
-
-        return results;
+        return await photoAlbumRepository.GetPhotoAlbumsInfosAsync().ToListAsync(cancellationToken);
     }
 }

@@ -2,11 +2,9 @@
 
 public interface IFileService
 {
-    void CreateDirectory(string path, string name);
+    bool CreateDirectory(string path);
 
-    void CreateDirectory(string name);
+    bool DeleteDirectory(string path, bool isRecursive = true);
 
-    bool DeleteDirectory(string path, string name);
-
-    bool DeleteDirectory(string folderName);
+    bool SecureDeleteDirectory(string path, bool isRecursive = true);
 }

@@ -1,19 +1,16 @@
-﻿using Pic.Data.Interfaces.Repositories;
-using Pic.Data.Models;
-using Pic.Logic.Interfaces;
-using Pic.Logic.Photos.Commands;
+﻿using Pic.Logic.Directories.Commands;
 
 namespace Pic.Logic.PhotoAlbums.Commands;
 
 public class DeletePhotoAlbumsCommandHandler : IRequestHandler<DeletePhotoAlbumsCommand>
 {
     private readonly IPhotoAlbumRepository photoAlbumRepository;
-    private readonly IFileService fileService;
+    private readonly IMediator mediator;
 
-    public DeletePhotoAlbumsCommandHandler(IPhotoAlbumRepository photoAlbumRepository, IFileService fileService)
+    public DeletePhotoAlbumsCommandHandler(IPhotoAlbumRepository photoAlbumRepository, IMediator mediator)
     {
         this.photoAlbumRepository = photoAlbumRepository;
-        this.fileService = fileService;
+        this.mediator = mediator;
     }
 
     public async Task<Unit> Handle(DeletePhotoAlbumsCommand request, CancellationToken cancellationToken)
@@ -24,7 +21,7 @@ public class DeletePhotoAlbumsCommandHandler : IRequestHandler<DeletePhotoAlbums
 
         await foreach (var photoAlbum in photoAlbums)
         {
-            var isDeleted = fileService.DeleteDirectory(photoAlbum.FolderName);
+            var isDeleted = await mediator.Send(new DeleteDirectoryCommand(photoAlbum.FolderName));
 
             if (isDeleted)
             {

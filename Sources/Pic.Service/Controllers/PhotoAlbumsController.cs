@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Pic.Data.Models;
+using Pic.Logic.PhotoAlbums.Commands;
 using Pic.Logic.PhotoAlbums.Queries;
-using Pic.Logic.Photos.Commands;
 using Pic.Service.Controllers.Models.PhotoAlbums;
 
 namespace Pic.Service.Controllers

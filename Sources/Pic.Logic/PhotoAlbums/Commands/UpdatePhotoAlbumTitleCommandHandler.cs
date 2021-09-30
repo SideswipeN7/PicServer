@@ -1,21 +1,10 @@
-﻿using Pic.Data.Interfaces.Repositories;
-using Pic.Logic.Interfaces;
-using Pic.Logic.Photos.Commands;
-
-namespace Pic.Logic.PhotoAlbums.Commands;
+﻿namespace Pic.Logic.PhotoAlbums.Commands;
 
 public class UpdatePhotoAlbumTitleCommandHandler : IRequestHandler<UpdatePhotoAlbumTitleCommand>
 {
-    private readonly INameGenerationService nameGenerationService;
     private readonly IPhotoAlbumRepository photoAlbumRepository;
-    private readonly IFileService fileService;
 
-    public UpdatePhotoAlbumTitleCommandHandler(INameGenerationService nameGenerationService, IPhotoAlbumRepository photoAlbumRepository, IFileService fileService)
-    {
-        this.nameGenerationService = nameGenerationService;
-        this.photoAlbumRepository = photoAlbumRepository;
-        this.fileService = fileService;
-    }
+    public UpdatePhotoAlbumTitleCommandHandler(IPhotoAlbumRepository photoAlbumRepository) => this.photoAlbumRepository = photoAlbumRepository;
 
     public async Task<Unit> Handle(UpdatePhotoAlbumTitleCommand request, CancellationToken cancellationToken)
     {

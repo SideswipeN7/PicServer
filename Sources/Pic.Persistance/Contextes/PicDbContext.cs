@@ -6,6 +6,8 @@ public class PicDbContext : DbContext
 
     public DbSet<Photo> Photos { get; set; } = default!;
 
+    public DbSet<Setting> Settings { get; set; } = default!;
+
     public PicDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
     {
     }

@@ -1,7 +1,4 @@
-﻿using Pic.Data.Interfaces.Repositories;
-using Pic.Logic.Photos.Commands;
-
-namespace Pic.Logic.PhotoAlbums.Commands;
+﻿namespace Pic.Logic.PhotoAlbums.Commands;
 
 public class MarkPhotoAlbumsAsDeletedCommandHandler : IRequestHandler<MarkPhotoAlbumsAsDeletedCommand>
 {

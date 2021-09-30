@@ -1,6 +1,4 @@
-﻿using Pic.Data.Interfaces.Repositories;
-
-namespace Pic.Persistance.Repositories;
+﻿namespace Pic.Persistance.Repositories;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
 {
