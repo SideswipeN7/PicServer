@@ -2,5 +2,5 @@
 
 public interface ISettingsRepository
 {
-    Task<string> FindSetting(string settingKey);
+    Task<string> FindSettingAsync(string settingKey, CancellationToken cancellationToken = default);
 }

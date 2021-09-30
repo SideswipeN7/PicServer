@@ -13,7 +13,7 @@ public class CreateDirectoryCommandHandler : IRequestHandler<CreateDirectoryComm
 
     public async Task<bool> Handle(CreateDirectoryCommand request, CancellationToken cancellationToken)
     {
-        var path = await settingsRepository.FindSetting(SettingsConstants.SaveFileLocation);
+        var path = await settingsRepository.FindSettingAsync(SettingsConstants.SaveFileLocation, cancellationToken);
         var fullPath = Path.Combine(path, request.DirectoryName);
 
         return fileService.CreateDirectory(fullPath);

@@ -13,7 +13,7 @@ public class DeleteDirectoryCommandHandler : IRequestHandler<DeleteDirectoryComm
 
     public async Task<bool> Handle(DeleteDirectoryCommand request, CancellationToken cancellationToken)
     {
-        var path = await settingsRepository.FindSetting(SettingsConstants.SaveFileLocation);
+        var path = await settingsRepository.FindSettingAsync(SettingsConstants.SaveFileLocation);
         var fullPath = Path.Combine(path, request.DirectoryName);
 
         return fileService.SecureDeleteDirectory(fullPath);
