@@ -1,8 +1,10 @@
-.sidenav-item-selected {
-  background: rgba(233,30,99,.15);
-  color: #f492b4;
+.sidenav-item {
+  &.selected {
+    background: rgba(233, 30, 99, 0.15);
+    color: #f492b4;
+  }
 
-  &:hover{
-    background: rgba(233,30,99,.3);
+  &:hover {
+    background: rgba(233, 30, 99, 0.3);
   }
 }
