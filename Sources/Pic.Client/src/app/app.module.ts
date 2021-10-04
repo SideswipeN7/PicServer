@@ -4,19 +4,19 @@ import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { SidebarComponent } from './main/components/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HammerModule,
     SharedModule.forRoot(),
+    MainModule.forRoot(),
     BrowserAnimationsModule,
   ],
   providers: [],

@@ -1,0 +1,26 @@
+<p class="toolbar m-0">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="toggleMenu()">menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <ng-container *ngTemplateOutlet="themeSwitcher">
+    </ng-container>
+
+  </mat-toolbar>
+</p>
+
+<ng-template #themeSwitcher>
+  <button mat-icon-button class="light-theme-icon" aria-label="Switch to dark theme" *ngIf="theme === 'light-theme' || !theme"
+    (click)="toggleTheme()">
+    <mat-icon>brightness_7</mat-icon>
+  </button>
+  <button mat-icon-button class="dark-theme-icon" aria-label="Switch to light theme" *ngIf="theme === 'dark-theme'"
+    (click)="toggleTheme()">
+    <mat-icon>brightness_3</mat-icon>
+  </button>
+</ng-template>
