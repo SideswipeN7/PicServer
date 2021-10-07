@@ -1,0 +1,16 @@
+<mat-nav-list role="navigation">
+  <!-- <mat-list-item *ngFor="let link of links">
+    <a matLine href="...">{{ link }}</a>
+    <button mat-icon-button (click)="showInfo(link)">
+       <mat-icon>info</mat-icon>
+    </button>
+ </mat-list-item> -->
+  <a mat-list-item [routerLink]="''" class="sidenav-item" routerLinkActive="selected">
+    <mat-icon class="me-2">home</mat-icon>
+    <div>Home</div>
+  </a>
+  <a mat-list-item [routerLink]="'/albums'" class="sidenav-item" routerLinkActive="selected">
+    <mat-icon class="me-2">collections</mat-icon>
+    <div>Albums</div>
+  </a>
+</mat-nav-list>
