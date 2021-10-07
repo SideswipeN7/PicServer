@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F981D79-B307-4E21-889F-69A7AB636696}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Service", "Sources\Pic.Service\Pic.Service.csproj", "{3ED22457-D450-4F41-9460-1B0F817E7DF9}"
@@ -14,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Logic", "Sources\Pic.Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Data", "Sources\Pic.Data\Pic.Data.csproj", "{2B024E65-B659-4A6D-B058-B38A81524E52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pic.Persistance", "Sources\Pic.Persistance\Pic.Persistance.csproj", "{1F84E443-A963-4433-AE72-A551424EE5EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pic.Persistance", "Sources\Pic.Persistance\Pic.Persistance.csproj", "{1F84E443-A963-4433-AE72-A551424EE5EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,5 @@
-<div class="{{theme}} w-100 h-100">
- <app-navbar [theme]="theme" (onThemeToggle)="changeTheme()" (onMenuToggle)="drawer.toggle()" ></app-navbar>
-
+<div class="w-100 h-100" [ngClass]="theme">
+  <app-navbar (onMenuToggle)="drawer.toggle()"></app-navbar>
   <mat-drawer-container class="example-container" [hasBackdrop]="false">
     <mat-drawer #drawer mode="side" [opened]="true">
       <app-sidebar></app-sidebar>
