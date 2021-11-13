@@ -20,12 +20,14 @@ export class SidebarComponent implements OnInit {
       {
         displayName: 'Home',
         icon: 'home',
-        routerLink: ''
+        routerLink: '/',
+        isExact: true,
       },
       {
         displayName: 'Albums',
         icon: 'collections',
-        routerLink: '/albums'
+        routerLink: '/albums',
+        isExact: false,
       },
     ];
   }

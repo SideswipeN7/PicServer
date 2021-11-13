@@ -1,12 +1,7 @@
 <mat-nav-list role="navigation pt-0">
-  <a
-  mat-list-item
-  class="sidenav-item"
-  routerLinkActive="selected"
-  *ngFor="let item of menuItems"
-  [routerLink]="item.routerLink"
->
-  <mat-icon class="me-2">{{ item.icon }}</mat-icon>
-  <div>{{ item.displayName }}</div>
-</a>
+  <a mat-list-item class="sidenav-item" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: item.isExact}"
+    *ngFor="let item of menuItems" [routerLink]="item.routerLink">
+    <mat-icon class="me-2">{{ item.icon }}</mat-icon>
+    <div>{{ item.displayName }}</div>
+  </a>
 </mat-nav-list>
