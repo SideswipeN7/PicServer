@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Pic.Persistance.Contextes;
 
 namespace Pic.Migrations.Extensions;
 
@@ -10,7 +11,7 @@ public static class MigrationRunner
         using var scope = services.CreateScope();
         var provider = scope.ServiceProvider;
 
-        var logger = provider.GetRequiredService<ILogger>();
+        var logger = provider.GetRequiredService<ILogger<PicDbContext>>();
 
         var context = provider.GetRequiredService<PicDbContext>();
 

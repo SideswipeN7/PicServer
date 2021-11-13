@@ -6,7 +6,7 @@ var app = WebApplication
     .RegisterServicesAndDI()
     .Build();
 
-app.UseSwagger();
+app.UseConfiguredSwagger();
 
 app.UseHttpsRedirection();
 

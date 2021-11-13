@@ -30,7 +30,7 @@ public static class WebApplicationExtensions
         return webApplication;
     }
 
-    public static WebApplication UseSwagger(this WebApplication webApplication)
+    public static WebApplication UseConfiguredSwagger(this WebApplication webApplication)
     {
         if (webApplication.Environment.IsDevelopment())
         {
