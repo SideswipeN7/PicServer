@@ -1,4 +1,4 @@
 ﻿namespace Pic.Service.Controllers.Models
 {
-    public record AddPhoto(string photoName, byte[] photoData);
+    public record AddPhoto(string PhotoName, byte[] PhotoData);
 }

@@ -1,6 +1,6 @@
 ﻿namespace Pic.Logic.Services;
 
-public class FileService : IFileService
+internal class FileService : IFileService
 {
     public bool CreateDirectory(string path)
     {

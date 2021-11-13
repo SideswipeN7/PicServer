@@ -1,4 +1,5 @@
-﻿using Pic.Logic.Directories.Commands;
+﻿using Pic.Data.Entities;
+using Pic.Logic.Directories.Commands;
 
 namespace Pic.Logic.PhotoAlbums.Commands;
 
@@ -17,7 +18,6 @@ public class DeletePhotoAlbumsCommandHandler : IRequestHandler<DeletePhotoAlbums
     {
         var photoAlbums = photoAlbumRepository.FindAlbumsMarkedAsDeleted();
         var photoAlbumsToDelete = new List<PhotoAlbum>();
-
 
         await foreach (var photoAlbum in photoAlbums)
         {

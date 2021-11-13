@@ -1,4 +1,5 @@
-﻿using Pic.Data.Models;
+﻿using Pic.Data.Entities;
+using Pic.Data.Models;
 
 namespace Pic.Data.Interfaces.Repositories;
 

@@ -32,7 +32,7 @@ public class CreatePhotoAlbumCommandHandler : IRequestHandler<CreatePhotoAlbumCo
             await photoAlbumRepository.DeleteRangeAsync(new[] { photoAlbum }, cancellationToken);
 
             // TODO: Throw correct exception
-            throw new Exception();
+            throw new InvalidDataException();
         }
 
         return photoAlbum.Id;

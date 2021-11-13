@@ -8,12 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Pic.Logic\Pic.Logic.csproj" />
-    <ProjectReference Include="..\Pic.Persistance\Pic.Persistance.csproj" />
+    <ProjectReference Include="..\Pic.Migrations\Pic.Migrations.csproj" />
   </ItemGroup>
 
 </Project>

@@ -22,14 +22,14 @@ namespace Pic.Service.Controllers
         [HttpPost("add")]
         public Task Add(AddPhoto addPhotoDto)
         {
-            return mediator.Send(new AddPhotoCommand(addPhotoDto.photoData, addPhotoDto.photoName));
+            return mediator.Send(new AddPhotoCommand(addPhotoDto.PhotoData, addPhotoDto.PhotoName));
         }
 
         [HttpGet("by-filename/{name}")]
         public async Task<IActionResult> Get(string name)
         {
             var fileBytes = await mediator.Send(new GetPhotoQuery(name));
-            if(fileBytes is null)
+            if (fileBytes is null)
             {
                 return NotFound();
             }

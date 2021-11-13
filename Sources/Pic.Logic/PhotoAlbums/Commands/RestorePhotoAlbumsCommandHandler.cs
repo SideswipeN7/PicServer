@@ -10,7 +10,7 @@ public class RestorePhotoAlbumsCommandHandler : IRequestHandler<RestorePhotoAlbu
     {
         var photoAlbums = photoAlbumRepository.FindAlbumsMarkedAsDeleted(request.PhotoAlbumIds);
 
-        await photoAlbums.ForEachAsync(pa => pa.MarkAsDeleted(), cancellationToken);
+        await photoAlbums.ForEachAsync(pa => pa.IsDeleted = true, cancellationToken);
 
         await photoAlbumRepository.SaveChangesAsync(cancellationToken);
 

@@ -1,6 +1,7 @@
 ﻿namespace Pic.Data.Interfaces.Repositories;
 
-public interface IGenericRepository<T> where T : class, IEntity
+public interface IGenericRepository<T>
+    where T : class, IEntity
 {
     Task<T?> FindAsync(int id, CancellationToken cancellationToken = default);
 
