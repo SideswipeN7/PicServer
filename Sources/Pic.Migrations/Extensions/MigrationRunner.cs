@@ -19,7 +19,8 @@ public static class MigrationRunner
         {
             logger.LogInformation("Starting Migrations");
 
-            context.Database.Migrate();
+            var migrationContext = new MigrationContext(context.Database.GetConnectionString()!);
+            migrationContext.Database.Migrate();
 
             logger.LogInformation("Finished Migrations");
         }

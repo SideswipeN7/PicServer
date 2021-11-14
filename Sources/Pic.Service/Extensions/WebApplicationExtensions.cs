@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SpaServices.AngularCli;
+﻿using System;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Pic.Migrations.Extensions;
 
 namespace Pic.Service.Extensions;
@@ -7,18 +8,17 @@ public static class WebApplicationExtensions
 {
     public static WebApplication UseClientApp(this WebApplication webApplication)
     {
-        webApplication.UseSpa(spa =>
-        {
-            spa.Options.SourcePath = "..\\Pic.Client";
-
-            if (webApplication.Environment.IsDevelopment())
+        webApplication.MapWhen(
+            x => x.Request.Path.HasValue && !x.Request.Path.Value.StartsWith("/api"),
+            builder => builder.UseSpa(spa =>
             {
-                spa.UseAngularCliServer(npmScript: "start");
-#pragma warning disable S1075 // URIs should not be hardcoded
-                spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
-#pragma warning restore S1075 // URIs should not be hardcoded
-            }
-        });
+                spa.Options.SourcePath = "..\\Pic.Client";
+
+                if (webApplication.Environment.IsDevelopment())
+                {
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            }));
 
         return webApplication;
     }

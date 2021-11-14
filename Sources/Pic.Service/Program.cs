@@ -12,11 +12,13 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
-
 app.UseStaticFiles();
 
+app.UseSpaStaticFiles();
+
 app.UseClientApp();
+
+app.MapControllers();
 
 app.RunMigrations();
 

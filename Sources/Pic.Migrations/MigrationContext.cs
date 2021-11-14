@@ -3,13 +3,12 @@
 internal class MigrationContext : PicDbContext
 {
     public MigrationContext()
-        : base(new DbContextOptionsBuilder().Options)
+        : base(new DbContextOptionsBuilder().UseSqlServer().Options)
     {
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public MigrationContext(string connectionString)
+        : base(new DbContextOptionsBuilder().UseSqlServer(connectionString).Options)
     {
-        base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer();
     }
 }
