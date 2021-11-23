@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-webpack": "^0.1202.7",
+    "@angular-devkit/build-webpack": "^0.1300.3",
     "@angular/animations": "~12.2.8",
     "@angular/cdk": "^12.2.8",
     "@angular/common": "~12.2.8",
@@ -31,8 +31,8 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.7",
-    "@angular/cli": "~12.2.7",
+    "@angular-devkit/build-angular": "^13.0.3",
+    "@angular/cli": "^13.0.3",
     "@angular/compiler-cli": "~12.2.8",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
@@ -44,5 +44,8 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.5",
     "webpack": "^5.58.0"
+  },
+  "resolutions": {
+    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
   }
 }
