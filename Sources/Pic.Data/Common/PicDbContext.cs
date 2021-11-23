@@ -1,12 +1,14 @@
-﻿namespace Pic.Data.Common;
+﻿using Pic.Core.Shared.Constants;
+
+namespace Pic.Data.Common;
 
 public class PicDbContext : DbContext
 {
-    public DbSet<PhotoAlbum> PhotoAlbums { get; set; } = default!;
+    public DbSet<PhotoAlbum> PhotoAlbums => Set<PhotoAlbum>();
 
-    public DbSet<Photo> Photos { get; set; } = default!;
+    public DbSet<Photo> Photos => Set<Photo>();
 
-    public DbSet<Setting> Settings { get; set; } = default!;
+    public DbSet<Setting> Settings => Set<Setting>();
 
     public PicDbContext(DbContextOptions dbContextOptions)
         : base(dbContextOptions)
@@ -46,6 +48,12 @@ public class PicDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PicDbContext).Assembly);
+    }
+
+    protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+    {
+        base.ConfigureConventions(configurationBuilder);
+        configurationBuilder.Properties<string>().HaveMaxLength(StringConstrains.MaxTextLength);
     }
 
     private void UpdateChanges()

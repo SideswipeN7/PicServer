@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pic.Data\Pic.Data.csproj" />
+    <ProjectReference Include="..\Pic.Core.Infrastructure\Pic.Core.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

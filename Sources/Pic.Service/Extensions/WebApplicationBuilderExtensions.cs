@@ -1,5 +1,6 @@
 ﻿using Pic.Data.DI;
 using Pic.Logic.DI;
+using Pic.Service.DI;
 
 namespace Pic.Service.Extensions;
 
@@ -12,13 +13,15 @@ public static class WebApplicationBuilderExtensions
         return builder;
     }
 
-    public static WebApplicationBuilder RegisterServicesAndDI(this WebApplicationBuilder builder)
+    public static WebApplicationBuilder RegisterServices(this WebApplicationBuilder builder)
     {
         var services = builder.Services;
         var configuration = builder.Configuration;
 
         DataModule.Register(configuration, services);
         LogicModule.Register(services);
+        AutoMapperModule.Register();
+        CoreModule.Register(services);
 
         services.AddControllers();
 

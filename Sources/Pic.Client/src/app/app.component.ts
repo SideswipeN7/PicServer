@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Theme } from './main/enums/theme';
@@ -13,7 +13,10 @@ export class AppComponent {
   public title = 'Pic-Client';
   public theme!: Theme;
 
-  constructor(private themeService: ThemeService) {}
+  constructor(
+    private themeService: ThemeService,
+    private renderer: Renderer2,
+    ) {}
   
   public ngOnDestroy(): void {
     this.onDestroy.next()
@@ -22,6 +25,6 @@ export class AppComponent {
   public ngOnInit(): void {
     this.themeService.theme$
     .pipe(takeUntil(this.onDestroy))
-    .subscribe(newTheme => this.theme = newTheme as Theme);
+    .subscribe(newTheme => this.renderer.setAttribute(document.querySelector('html'), 'class', newTheme));
   }
 }

@@ -1,6 +1,4 @@
-﻿using Pic.Data.Common;
-
-namespace Pic.Data.Repositories;
+﻿namespace Pic.Data.Repositories;
 
 internal class PhotoAlbumRepository : GenericRepository<PhotoAlbum>, IPhotoAlbumRepository
 {
@@ -26,16 +24,20 @@ internal class PhotoAlbumRepository : GenericRepository<PhotoAlbum>, IPhotoAlbum
              .AsAsyncEnumerable();
     }
 
-    public IAsyncEnumerable<AlbumInfo> GetPhotoAlbumsInfosAsync()
+    public Task<AlbumInfo?> GetSinglePhotoAlbumsInfo(int photoAlbumId, CancellationToken cancellationToken = default)
     {
         return Context
             .OnlyActive()
-            .Select(pa => new AlbumInfo
-            {
-                Id = pa.Id,
-                Title = pa.Title,
-                Thumbnail = pa.Thumbnail ?? Array.Empty<byte>(),
-                PhotosCount = pa.Photos.Count,
-            }).AsAsyncEnumerable();
+            .Where(pa => pa.Id == photoAlbumId)
+            .MapToAlbumInfo()
+            .FirstOrDefaultAsync(cancellationToken);
+    }
+
+    public IAsyncEnumerable<AlbumInfo> GetPhotoAlbumsInfos()
+    {
+        return Context
+            .OnlyActive()
+            .MapToAlbumInfo()
+            .AsAsyncEnumerable();
     }
 }

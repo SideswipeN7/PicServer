@@ -1,4 +1,6 @@
-﻿namespace Pic.Data.Common;
+﻿using Pic.Core.Infrastructure.Interfaces;
+
+namespace Pic.Data.Common;
 
 internal class GenericRepository<T> : IGenericRepository<T>
     where T : class, IEntity
@@ -7,7 +9,7 @@ internal class GenericRepository<T> : IGenericRepository<T>
 
     protected DbSet<T> Context => DbContext.Set<T>();
 
-    public Task<T?> FindAsync(int id, CancellationToken cancellationToken = default) => Context.FirstOrNullAsync(id, cancellationToken);
+    public Task<T?> FindAsync(int id, CancellationToken cancellationToken = default) => Context.FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
 
     public async Task<T> InsertAsync(T entity, CancellationToken cancellationToken = default)
     {

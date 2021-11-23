@@ -1,9 +1,10 @@
 ﻿global using MediatR;
 global using Microsoft.AspNetCore.Mvc;
-global using Pic.Data.Models;
-global using Pic.Logic.PhotoAlbums.Commands;
-global using Pic.Logic.PhotoAlbums.Queries;
-global using Pic.Logic.Photos.Commands;
-global using Pic.Logic.Photos.Queries;
-global using Pic.Service.Controllers.Models;
-global using Pic.Service.Controllers.Models.PhotoAlbums;
+global using Pic.Core.Infrastructure.Models;
+global using Pic.Core.Logic.PhotoAlbums.Commands;
+global using Pic.Core.Logic.PhotoAlbums.Queries;
+global using Pic.Core.Logic.Photos.Commands;
+global using Pic.Core.Logic.Photos.Queries;
+global using Pic.Service.Areas.PhotoAlbums.Models;
+global using Pic.Service.Areas.Photos.Models;
+global using Mapper = Pic.Core.Shared.Extensions.Mapper;

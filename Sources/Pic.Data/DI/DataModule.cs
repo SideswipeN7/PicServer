@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Pic.Data.Repositories;
 
 namespace Pic.Data.DI;
+
 public static class DataModule
 {
     public static void Register(ConfigurationManager configuration, IServiceCollection services)

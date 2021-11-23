@@ -17,7 +17,7 @@ export class PhotoAlbumsOverviewComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    public dialog: MatDialog,
+    public matDialog: MatDialog,
     private photoAlbumService: PhotoAlbumService,
     ) { }
 
@@ -26,9 +26,9 @@ export class PhotoAlbumsOverviewComponent implements OnInit {
   }
 
   add(): void {
-    const dialogRef = this.dialog.open(CreatePhotoAlbumDialogComponent, {
+    const dialogRef = this.matDialog.open(CreatePhotoAlbumDialogComponent, {
       width: '250px',
-      data: {},
+      data: {id:0, title: ''} as AlbumInfo,
       hasBackdrop: true,
     });
 

@@ -3,7 +3,7 @@
 var app = WebApplication
     .CreateBuilder(args)
     .AddConfigurations()
-    .RegisterServicesAndDI()
+    .RegisterServices()
     .Build();
 
 app.UseConfiguredSwagger();

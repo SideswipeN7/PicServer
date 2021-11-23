@@ -1,6 +1,4 @@
-﻿using Pic.Data.Common;
-
-namespace Pic.Data.Repositories;
+﻿namespace Pic.Data.Repositories;
 
 internal class SettingsRepository : GenericRepository<Setting>, ISettingsRepository
 {

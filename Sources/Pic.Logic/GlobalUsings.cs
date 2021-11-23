@@ -1,11 +1,3 @@
 ﻿global using System.IO;
-global using System.Threading;
-global using System.Threading.Tasks;
-global using MediatR;
-global using Pic.Data.Constants;
-global using Pic.Data.Entities;
-global using Pic.Data.Interfaces.Repositories;
-global using Pic.Data.Models;
-global using Pic.Logic.Interfaces;
-global using Pic.Logic.Photos.Commands;
+global using Pic.Core.Infrastructure.Interfaces.Services;
 global using Pic.Logic.Services;
