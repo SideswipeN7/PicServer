@@ -20,6 +20,6 @@ app.UseClientApp();
 
 app.MapControllers();
 
-app.RunMigrations();
+app.UseMigrations();
 
 app.Run();

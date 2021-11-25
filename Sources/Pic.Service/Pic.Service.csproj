@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pic.Core.Logic\Pic.Core.Logic.csproj" />
+    <ProjectReference Include="..\Pic.Data.Migrations\Pic.Data.Migrations.csproj" />
     <ProjectReference Include="..\Pic.Data\Pic.Data.csproj" />
     <ProjectReference Include="..\Pic.Logic\Pic.Logic.csproj" />
   </ItemGroup>

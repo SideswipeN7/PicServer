@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.SpaServices.AngularCli;
-
-//using Pic.Data.Migrations.Extensions;
+using Pic.Migrations.Extensions;
 
 namespace Pic.Service.Extensions;
 
@@ -23,9 +22,9 @@ public static class WebApplicationExtensions
         return webApplication;
     }
 
-    public static WebApplication RunMigrations(this WebApplication webApplication)
+    public static WebApplication UseMigrations(this WebApplication webApplication)
     {
-        //MigrationRunner.RunMigrations(webApplication.Services);
+        MigrationRunner.RunMigrations(webApplication.Services);
 
         return webApplication;
     }

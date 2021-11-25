@@ -9,7 +9,7 @@ public class PhotoAlbumsMappings : Profile
         CreateMap<CreatePhotoAlbumRequest, CreatePhotoAlbumCommand>();
 
         CreateMap<UpdatePhotoAlbumRequest, UpdatePhotoAlbumTitleCommand>()
-            .ForMember(command => command.PhotoAlbumId, opt => opt.MapFrom(Mapper.IdProperty));
+            .ForMember(command => command.PhotoAlbumId, opt => opt.MapFrom<CustomIdResolver>());
 
         CreateMap<int, GetSinglePhotoAlbumInfoQuery>()
             .ForMember(command => command.Id, opt => opt.MapFrom(request => request));
