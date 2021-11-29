@@ -5,6 +5,7 @@
 
 # Custom
 Sources/Pic.Service/user-settings/appsettings.json
+Sources/Pic.Client/.angular
 
 # User-specific files
 *.suo

@@ -21,6 +21,7 @@ public class CreatePhotoAlbumCommandHandler : IRequestHandler<CreatePhotoAlbumCo
         {
             FolderName = nameGenerationService.Generate(),
             Title = request.Title,
+            Synopsis = request.Synopsis,
         };
 
         await photoAlbumRepository.InsertAsync(photoAlbum, cancellationToken);

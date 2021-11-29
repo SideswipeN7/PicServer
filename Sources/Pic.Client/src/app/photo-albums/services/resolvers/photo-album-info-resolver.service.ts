@@ -9,8 +9,7 @@ import { PhotoAlbumService } from "../photo-album.service";
 export class PhotoAlbumInfoResolverService implements Resolve<Observable<AlbumInfo>> {
 	constructor(private photoAlbumService: PhotoAlbumService) { }
 
-	resolve(_route: ActivatedRouteSnapshot, _state: RouterStateSnapshot): Observable<AlbumInfo> {
-
-		return this.photoAlbumService.getAlbum();
+	resolve(route: ActivatedRouteSnapshot, _state: RouterStateSnapshot): Observable<AlbumInfo> {
+		return this.photoAlbumService.getAlbum(route.params.id);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Linq.Expressions;
+using AutoMapper;
 using Pic.Core.Shared.Exceptions;
 
 namespace Pic.Core.Shared.Extensions;
@@ -31,5 +32,16 @@ public static class Mapper
     public static TDestination MapWithId<TDestination>(object source, int id)
     {
         return Instance.Map<TDestination>(source, opt => opt.Items.Add(IdProperty, id));
+    }
+
+    public static IMappingExpression<TSource, TDestination> MapRecordMember<TSource, TDestination, TMember>(
+        this IMappingExpression<TSource, TDestination> mappingExpression,
+        Expression<Func<TDestination, TMember>> destinationMember,
+        Expression<Func<TSource, TMember>> sourceMember)
+    {
+        var expression = (MemberExpression)destinationMember.Body;
+        var name = expression.Member.Name;
+
+        return mappingExpression.ForCtorParam(name, opt => opt.MapFrom(sourceMember));
     }
 }

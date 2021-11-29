@@ -28,14 +28,14 @@ export class PhotoAlbumsOverviewComponent implements OnInit {
   add(): void {
     const dialogRef = this.matDialog.open(CreatePhotoAlbumDialogComponent, {
       width: '250px',
-      data: {id:0, title: ''} as AlbumInfo,
+      data: {} as AlbumInfo,
       hasBackdrop: true,
     });
 
     dialogRef.afterClosed()
     .pipe(
       filter(result => !!result),
-      switchMap(result => this.photoAlbumService.create(result)),
+      switchMap((result: AlbumInfo) => this.photoAlbumService.create(result.title, result.synopsis)),
       switchMap(() => this.photoAlbumService.getAlbums()),
     )
     .subscribe(result => {

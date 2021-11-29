@@ -1,3 +1,26 @@
+<!-- <mat-toolbar color="secondary" class="w-100">
+    <mat-toolbar-row>
+        <span>{{ albumInfo.title }}</span>
+    </mat-toolbar-row>
+</mat-toolbar> -->
+
+<div class="row" *ngIf="albumInfo.synopsis">
+    <div class="col w-100">
+        <mat-card class="example-card">
+            <mat-card-content>
+                <p *ngIf="!isEdit">
+                    {{ albumInfo.synopsis }}
+                </p>
+                <mat-form-field appearance="fill" class="mt-4" *ngIf="isEdit">
+                    <mat-label>Photo album synopsis</mat-label>
+                    <textarea  matInput [(ngModel)]="editAlbumInfo.synopsis" [maxlength]="maxSynopsisLength"></textarea>
+                    <mat-hint align="end">{{editAlbumInfo.synopsis?.length || 0}}/{{ maxSynopsisLength }}</mat-hint>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
 <button mat-fab color="primary" class="md-fab md-primary md-fab-bottom-right" (click)="edit()">
     <mat-icon>edit</mat-icon>
 </button>

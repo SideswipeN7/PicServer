@@ -6,6 +6,8 @@ public class AlbumInfo
 
     public string Title { get; set; } = default!;
 
+    public string? Synopsis { get; set; }
+
     public byte[] Thumbnail { get; set; } = default!;
 
     public int PhotosCount { get; set; }

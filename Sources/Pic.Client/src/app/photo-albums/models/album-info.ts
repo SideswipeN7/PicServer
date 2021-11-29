@@ -1,6 +1,7 @@
 export interface AlbumInfo{
   id: number,
-  title: string,
+  title: string, 
+  synopsis: string, 
   thumbnail: string,
   photosCount: number,
 }

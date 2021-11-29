@@ -18,11 +18,11 @@ export class PhotoAlbumService {
     return this.httpClient.get<AlbumInfo>(`${this.url}/${id}`);
   }
 
-  public create(title: string): Observable<number> {
-    return this.httpClient.post<number>(`${this.url}/add`,{title});
+  public create(title: string, synopsis: string): Observable<number> {
+    return this.httpClient.post<number>(`${this.url}/add`, { title, synopsis });
   }
 
   public edit(id: number, title: string): Observable<void> {
-    return this.httpClient.put<void>(`${this.url}/${id}`,{title});
+    return this.httpClient.put<void>(`${this.url}/${id}`, { title });
   }
 }

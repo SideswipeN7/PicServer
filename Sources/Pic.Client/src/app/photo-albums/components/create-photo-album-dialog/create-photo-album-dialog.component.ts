@@ -8,6 +8,9 @@ import { AlbumInfo } from '../../models/album-info';
   templateUrl: './create-photo-album-dialog.component.html',
 })
 export class CreatePhotoAlbumDialogComponent {
+  readonly maxTitleLength = 200;
+  readonly maxSynopsisLength = 200;
+
   constructor(
     private dialogRef: MatDialogRef<CreatePhotoAlbumDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public albumInfo: AlbumInfo,

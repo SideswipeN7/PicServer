@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Pic.Core.Shared.Extensions;
 
 namespace Pic.Service.Mappings;
 
@@ -12,7 +13,8 @@ public class PhotoAlbumsMappings : Profile
             .ForMember(command => command.PhotoAlbumId, opt => opt.MapFrom<CustomIdResolver>());
 
         CreateMap<int, GetSinglePhotoAlbumInfoQuery>()
-            .ForMember(command => command.Id, opt => opt.MapFrom(request => request));
+            .MapRecordMember(command => command.Id, request => request)
+            .ReverseMap();
 
         CreateMap<IEnumerable<int>, MarkPhotoAlbumsAsDeletedCommand>()
             .ForMember(command => command.PhotoAlbumIds, opt => opt.MapFrom(request => request));
