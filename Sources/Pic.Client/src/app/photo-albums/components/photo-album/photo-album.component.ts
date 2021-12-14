@@ -1,3 +1,4 @@
+import { AddPhotosDialogComponent } from './../add-photos-dialog/add-photos-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
@@ -9,13 +10,15 @@ import { PhotoAlbumService } from '../../services/photo-album.service';
 @Component({
   selector: 'app-photo-album',
   templateUrl: './photo-album.component.html',
-  styleUrls: ['./photo-album.component.scss']
+  styleUrls: ['./photo-album.component.scss'],
 })
 export class PhotoAlbumComponent implements OnInit {
-  maxSynopsisLength = 200;
+  maxSynopsisLength = 500;
+  maxTitleLength = 200;
   albumInfo!: AlbumInfo;
   editAlbumInfo!: AlbumInfo;
   isEdit = false;
+  canEdit = true;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -27,8 +30,29 @@ export class PhotoAlbumComponent implements OnInit {
     this.albumInfo = this.activatedRoute.snapshot.data.albumInfo;
   }
 
-  edit(): void {
+  toggleEdit(): void {
     this.isEdit = !this.isEdit;
     this.editAlbumInfo = { ...this.albumInfo };
+  }
+
+  save(): void {
+  }
+
+  add(): void {
+    const dialogRef = this.matDialog.open(AddPhotosDialogComponent, {
+      // width: '250px',
+      // data: {} as AlbumInfo,
+      hasBackdrop: true,
+    });
+
+    dialogRef.afterClosed()
+      .pipe(
+        filter(result => !!result),
+        // switchMap((result: AlbumInfo) => this.photoAlbumService.create(result.title, result.synopsis)),
+        // switchMap(() => this.photoAlbumService.getAlbums()),
+      )
+      .subscribe(result => {
+        // this.photoAlbums = result;
+      });
   }
 }

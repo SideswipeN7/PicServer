@@ -1,9 +1,12 @@
-<button mat-fab color="primary" class="md-fab md-primary md-fab-bottom-right" (click)="add()">
-    <mat-icon>add</mat-icon>
-</button>
+
 <div class="row">
-    <div class="col-12 col-offest-0 col-sm-6 col-sm-offest-2 col-md-4 col-md-offest-4 col-lg-2 col-lg-offest-10 my-2"
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 my-2"
         *ngFor="let photoAlbum of photoAlbums">
         <app-photo-album-miniature [id]="photoAlbum.id" [title]="photoAlbum.title" [synopsis]="photoAlbum.synopsis"></app-photo-album-miniature>
     </div>
 </div>
+
+
+<button mat-fab color="primary" class="md-fab fab-btn md-primary md-fab-bottom-right" (click)="add()">
+  <mat-icon>add</mat-icon>
+</button>

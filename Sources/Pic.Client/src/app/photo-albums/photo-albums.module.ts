@@ -9,6 +9,7 @@ import { PhotoAlbumResolverService } from "./services/resolvers/photo-album-reso
 import { CreatePhotoAlbumDialogComponent } from './components/create-photo-album-dialog/create-photo-album-dialog.component';
 import { PhotoAlbumComponent } from './components/photo-album/photo-album.component';
 import { PhotoAlbumInfoResolverService } from "./services/resolvers/photo-album-info-resolver.service";
+import { AddPhotosDialogComponent } from "./components/add-photos-dialog/add-photos-dialog.component";
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { PhotoAlbumInfoResolverService } from "./services/resolvers/photo-album-
     PhotoAlbumMiniatureComponent,
     CreatePhotoAlbumDialogComponent,
     PhotoAlbumComponent,
+    AddPhotosDialogComponent,
   ],
   entryComponents:[
     CreatePhotoAlbumDialogComponent,

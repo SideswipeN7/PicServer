@@ -12,7 +12,6 @@ import { CreatePhotoAlbumDialogComponent } from '../create-photo-album-dialog/cr
   styleUrls: ['./photo-albums-overview.component.scss']
 })
 export class PhotoAlbumsOverviewComponent implements OnInit {
-
   photoAlbums!: AlbumInfo[];
 
   constructor(
@@ -39,8 +38,7 @@ export class PhotoAlbumsOverviewComponent implements OnInit {
       switchMap(() => this.photoAlbumService.getAlbums()),
     )
     .subscribe(result => {
-      this.photoAlbums = result;      
+      this.photoAlbums = result;
     });
   }
-
 }

@@ -1,26 +1,96 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 @include mat.core();
 
+$my-primary: (
+  50: #e3f8f4,
+  100: #b8ede4,
+  200: #89e2d2,
+  300: #5ad6c0,
+  400: #36cdb3,
+  500: #13c4a5,
+  600: #11be9d,
+  700: #0eb693,
+  800: #0baf8a,
+  900: #06a279,
+  A100: #cdfff0,
+  A200: #9affe1,
+  A400: #67ffd2,
+  A700: #4dffcb,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-second: (
+  50: #e3e4e4,
+  100: #babbbb,
+  200: #8c8d8e,
+  300: #5e5f60,
+  400: #3c3d3e,
+  500: #191b1c,
+  600: #161819,
+  700: #121414,
+  800: #0e1011,
+  900: #080809,
+  A100: #5151ff,
+  A200: #1e1eff,
+  A400: #0000ea,
+  A700: #0000d0,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
 // Define a light theme
-$light-primary: mat.define-palette(mat.$pink-palette);
-$light-accent: mat.define-palette(mat.$pink-palette);
-$light-theme: mat.define-light-theme((
- color: (
-   primary: $light-primary,
-   accent: $light-accent,
- )
-));
+$light-primary: mat.define-palette($my-primary);
+$light-accent: mat.define-palette($my-second);
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+    ),
+  )
+);
 
 // Define a dark theme
-$dark-primary: mat.define-palette(mat.$pink-palette);
-$dark-accent: mat.define-palette(mat.$blue-gray-palette);
-$dark-theme: mat.define-dark-theme((
- color: (
-   primary: $dark-primary,
-   accent: $dark-accent,
- )
-));
+$dark-primary: mat.define-palette($my-primary);
+$dark-accent: mat.define-palette($my-second);
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+    ),
+  )
+);
 
 // Apply the dark theme by default
 // @include mat.core-theme($dark-theme);
@@ -36,7 +106,6 @@ $dark-theme: mat.define-dark-theme((
 .dark-theme {
   @include mat.all-component-themes($dark-theme);
   @include mat.strong-focus-indicators-theme($dark-theme);
-
-//   background: mat.get-color-from-palette($my-palette, 'darker');
-//  color: mat.get-color-from-palette($my-palette, 'darker-contrast');
+  // background: mat.get-color-from-palette($my-palette, "darker");
+  // color: mat.get-color-from-palette($my-palette, "darker-contrast");
 }
