@@ -5,19 +5,22 @@ namespace Pic.Service.Extensions;
 
 public static class WebApplicationExtensions
 {
+    //private const string BaseUri = "http://localhost:4200";
+
     public static WebApplication UseClientApp(this WebApplication webApplication)
     {
-        webApplication.MapWhen(
-            x => x.Request.Path.HasValue && !x.Request.Path.Value.StartsWith("/api"),
-            builder => builder.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "..\\Pic.Client";
+        //webApplication.MapWhen(
+        //    x => x.Request.Path.HasValue && !x.Request.Path.Value.StartsWith("/api"),
+        //    builder => builder.UseSpa(spa =>
+        //    {
+        //        spa.Options.SourcePath = "..\\Pic.Client";
 
-                if (webApplication.Environment.IsDevelopment())
-                {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
-            }));
+        //        if (webApplication.Environment.IsDevelopment())
+        //        {
+        //            // spa.UseAngularCliServer(npmScript: "start");
+        //            spa.UseProxyToSpaDevelopmentServer(BaseUri);
+        //        }
+        //    }));
 
         return webApplication;
     }

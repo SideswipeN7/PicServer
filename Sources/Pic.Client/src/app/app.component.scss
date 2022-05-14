@@ -17,18 +17,18 @@ body {
 
 mat-drawer-container {
   height: calc(100% - 64px);
-}d
-
-mat-drawer {
+}
+d mat-drawer {
   border-right: 1px solid black;
   height: 100%;
   width: 236px;
 }
 
 mat-drawer-content {
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-left: 1px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  inset: 0px;
+  display: block;
 }
+

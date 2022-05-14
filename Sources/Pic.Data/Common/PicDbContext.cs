@@ -1,4 +1,4 @@
-﻿using Pic.Core.Shared.Constants;
+﻿using Pic.Core.Infrastructure.Constants;
 
 namespace Pic.Data.Common;
 

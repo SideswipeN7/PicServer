@@ -5,6 +5,14 @@
   }
 
   &:hover {
-    background: #009276;
+    background: #009276 !important;
+    color: white;
   }
+
+  &:first{
+    border-top: 1px solid black;
+  }
+
+  border-bottom: 1px solid black;
+  color: white !important;
 }

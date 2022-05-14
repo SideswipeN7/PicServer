@@ -1,4 +1,5 @@
-﻿using Pic.Data.DI;
+﻿using Pic.Core.Logic.DI;
+using Pic.Data.DI;
 using Pic.Logic.DI;
 using Pic.Service.DI;
 
@@ -18,6 +19,8 @@ public static class WebApplicationBuilderExtensions
         var services = builder.Services;
         var configuration = builder.Configuration;
 
+        services.AddCors();
+
         DataModule.Register(configuration, services);
         LogicModule.Register(services);
         AutoMapperModule.Register();
@@ -33,7 +36,7 @@ public static class WebApplicationBuilderExtensions
         services.AddSpaStaticFiles(configuration =>
         {
             configuration.RootPath = "..\\Pic.Client";
-        });
+        });        
 
         return builder;
     }

@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Pic.Core.Shared.Constants;
+using Pic.Core.Infrastructure.Constants;
 
 namespace Pic.Service.Areas.PhotoAlbums.Models;
 public record UpdatePhotoAlbumRequest(

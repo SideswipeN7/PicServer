@@ -1,17 +1,27 @@
 <h1 mat-dialog-title>Create new album</h1>
 <div mat-dialog-content>
-    <mat-form-field appearance="fill">
-        <mat-label>Photo album name</mat-label>
-        <input matInput [(ngModel)]="albumInfo.title" [maxlength]="maxTitleLength" required>
-        <mat-hint align="end">{{albumInfo.title?.length || 0}}/{{ maxTitleLength }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="mt-4">
-        <mat-label>Photo album synopsis</mat-label>
-        <textarea  matInput [(ngModel)]="albumInfo.synopsis" [maxlength]="maxSynopsisLength"></textarea>
-        <mat-hint align="end">{{albumInfo.synopsis?.length || 0}}/{{ maxSynopsisLength }}</mat-hint>
-    </mat-form-field>
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Photo album name</mat-label>
+          <input matInput [(ngModel)]="albumInfo.title" [maxlength]="maxTitleLength" required>
+          <mat-hint align="end">{{albumInfo.title?.length || 0}}/{{ maxTitleLength }}</mat-hint>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="fill" class="mt-4">
+          <mat-label>Photo album synopsis</mat-label>
+          <textarea matInput [(ngModel)]="albumInfo.synopsis" [maxlength]="maxSynopsisLength"></textarea>
+          <mat-hint align="end">{{albumInfo.synopsis?.length || 0}}/{{ maxSynopsisLength }}</mat-hint>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
 </div>
 <div mat-dialog-actions>
-    <button mat-button (click)="onCancel()">Cancel</button>
-    <button mat-button [mat-dialog-close]="albumInfo" cdkFocusInitial color="primary">Create</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="albumInfo" cdkFocusInitial color="primary">Create</button>
 </div>

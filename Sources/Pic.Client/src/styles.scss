@@ -17,3 +17,15 @@ body {
   left: auto !important;
   position: fixed !important;
 }
+
+.mat-drawer-inner-container{
+  border-right: 1px solid black;
+}
+
+.dark-theme .mat-drawer-side {
+  border-right: none;
+}
+
+.light-theme .mat-drawer-inner-container{
+  background-color: #9aa1a7;
+}

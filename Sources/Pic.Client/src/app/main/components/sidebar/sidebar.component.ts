@@ -29,6 +29,12 @@ export class SidebarComponent implements OnInit {
         routerLink: '/albums',
         isExact: false,
       },
+      {
+        displayName: 'Favorite',
+        icon: 'favorite',
+        routerLink: '/favorite',
+        isExact: false,
+      },
     ];
   }
 }

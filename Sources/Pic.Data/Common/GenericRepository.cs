@@ -1,6 +1,4 @@
-﻿using Pic.Core.Infrastructure.Interfaces;
-
-namespace Pic.Data.Common;
+﻿namespace Pic.Data.Common;
 
 internal class GenericRepository<T> : IGenericRepository<T>
     where T : class, IEntity
@@ -11,39 +9,17 @@ internal class GenericRepository<T> : IGenericRepository<T>
 
     public Task<T?> FindAsync(int id, CancellationToken cancellationToken = default) => Context.FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
 
-    public async Task<T> InsertAsync(T entity, CancellationToken cancellationToken = default)
-    {
-        await Context.AddAsync(entity);
-        await DbContext.SaveChangesAsync(cancellationToken);
-
-        return entity;
-    }
+    public async Task<T> Insert(T entity, CancellationToken cancellationToken = default) => (await Context.AddAsync(entity, cancellationToken)).Entity;
 
     public IQueryable<T> Query() => Context.AsQueryable();
 
-    public Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
-    {
-        Context.Update(entity);
+    public void Update(T entity) => Context.Update(entity);
 
-        return DbContext.SaveChangesAsync(cancellationToken);
-    }
+    public void UpdateRange(IEnumerable<T> entities) => Context.UpdateRange(entities);
 
-    public Task UpdateAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
-    {
-        Context.UpdateRange(entities);
+    public Task SaveChanges(CancellationToken cancellationToken = default) => DbContext.SaveChangesAsync(cancellationToken);
 
-        return DbContext.SaveChangesAsync(cancellationToken);
-    }
+    public void DeleteRange(IEnumerable<T> entities) => Context.RemoveRange(entities);
 
-    public Task SaveChangesAsync(CancellationToken cancellationToken = default)
-    {
-        return DbContext.SaveChangesAsync(cancellationToken);
-    }
-
-    public Task DeleteRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
-    {
-        Context.RemoveRange(entities);
-
-        return DbContext.SaveChangesAsync();
-    }
+    public void Delete(T entity) => Context.Remove(entity);
 }

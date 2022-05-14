@@ -26,7 +26,6 @@ export class PhotoAlbumsOverviewComponent implements OnInit {
 
   add(): void {
     const dialogRef = this.matDialog.open(CreatePhotoAlbumDialogComponent, {
-      width: '250px',
       data: {} as AlbumInfo,
       hasBackdrop: true,
     });

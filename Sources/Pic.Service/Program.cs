@@ -8,6 +8,8 @@ var app = WebApplication
 
 app.UseConfiguredSwagger();
 
+app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod());
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

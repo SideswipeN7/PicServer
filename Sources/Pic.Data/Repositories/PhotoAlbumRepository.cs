@@ -24,20 +24,18 @@ internal class PhotoAlbumRepository : GenericRepository<PhotoAlbum>, IPhotoAlbum
              .AsAsyncEnumerable();
     }
 
-    public Task<AlbumInfo?> GetSinglePhotoAlbumsInfo(int photoAlbumId, CancellationToken cancellationToken = default)
+    public IAsyncEnumerable<PhotoAlbum> GetPhotoAlbums()
     {
         return Context
             .OnlyActive()
-            .Where(pa => pa.Id == photoAlbumId)
-            .MapToAlbumInfo()
-            .FirstOrDefaultAsync(cancellationToken);
+            .AsAsyncEnumerable();
     }
 
-    public IAsyncEnumerable<AlbumInfo> GetPhotoAlbumsInfos()
+    public Task<PhotoAlbum?> FindUsablePhotoAlbum(int photoAlbumId, CancellationToken cancellationToken = default)
     {
         return Context
-            .OnlyActive()
-            .MapToAlbumInfo()
-            .AsAsyncEnumerable();
+           .OnlyActive()
+           .Where(pa => pa.Id == photoAlbumId)
+           .FirstOrDefaultAsync(cancellationToken);
     }
 }
