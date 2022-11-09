@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PS.Pictures.Infrastructure\PS.Pictures.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="SonarAnalyzer.CSharp" Version="8.47.0.55603" />
+    <PackageReference Update="StyleCop.Analyzers" Version="1.2.0-beta.435" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Configurations - Copy\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="Configurations - Copy\appsettings.json" />
+    <_ContentIncludedByDefault Remove="Configurations - Copy\appsettings.Local.json" />
+  </ItemGroup>
+
+</Project>
