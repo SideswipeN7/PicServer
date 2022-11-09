@@ -10,7 +10,10 @@
 *.sln.docstates
 
 # local app settings
-**/Configurations/appsettings.Local.json
+# /Sources/Microservices/*/*.*.*/Configurations/appsettings.Local.json
+/Sources/Microservices/*/*/Configurations/appsettings.Local.json
+# secretes
+/Secretes/*.*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
